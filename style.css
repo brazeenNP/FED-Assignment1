@@ -1,0 +1,58 @@
+*{
+    /*space inside element between content and border*/
+    padding: 0;
+    /*space outside element between content and border*/
+    margin: 0;
+    /*removes the styling eg.bulletpoints on lists*/
+    list-style: none;
+    /*removes the text deco like underlines on links*/
+    text-decoration: none;
+    /*adds the padding and border to the element's width and height, MIGHTNOT BE USEFUL KIV*/
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Archivo Black", sans-serif;
+}
+
+nav{
+    /*background colour of nav bar*/
+    background: #1a1e2f;
+    /*height of the nav bar*/
+    height: 81px;
+    /*full width of the page*/
+    width: 100%;
+    text-align: center;
+}
+
+nav ul li{
+    /*make everything appear on the same line*/
+    display: inline-block;
+}
+
+nav ul li a{
+    /*change text colour to white*/
+    color: #ffffff;
+    /*change width to spread out the text*/
+    width: 200px;
+    /*change display mode so that the width is included in the spacing*/
+    display: block;
+    /*change top and right padding to uhh*/
+    padding: 30px 20px;
+    /*increase font size*/
+    font-size: 20px;
+    /*center the text so it is equal spacing*/
+    text-align: center;
+}
+
+nav ul li a:hover{
+    /*when hovered over, change the background colour and text colour*/
+    background-color: #ffa5d7;
+    color: black;
+    /*transition into the background colour for it to be smoother*/
+    transition: 0.5s;
+    /*increase letter spacing when hovered over for a cool effect*/
+    letter-spacing: 3px;
+    transform: translateY(-5px);
+    
+}
