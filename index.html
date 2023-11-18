@@ -13,14 +13,36 @@
     <header>
     </header>
     <nav>
-        <ul>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill = #ffffff d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
             <li><a href="#">TOUR</a></li>
             <li><a href="#">ARTIST</a></li>
             <li><a href="#">HOME</a></li>
             <li><a href="#">LISTEN</a></li>
             <li><a href="#">NEWS</a></li>
         </ul>
+        <ul>
+            <li class="hideOnMobile"><a href="#">TOUR</a></li>
+            <li class="hideOnMobile"><a href="#">ARTIST</a></li>
+            <li class="hideOnMobile"><a href="#">HOME</a></li>
+            <li class="hideOnMobile"><a href="#">LISTEN</a></li>
+            <li class="hideOnMobile"><a href="#">NEWS</a></li>
+            <!-- sidebar menu -->
+            <li class="menubutton" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill = #ffffff d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
     </nav>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+            
+        }
+        
+    </script>
     <footer></footer>
 </body>
 </html>
