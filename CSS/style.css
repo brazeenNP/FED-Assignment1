@@ -14,11 +14,11 @@
 /*------------------------------------------------BODY----------------------------------------------------------------*/
 body{
     font-family: "Archivo Black", sans-serif;
+    /*so that all the elements of body are in a column eg. nav, then main, then finally footer*/
     display: flex;
     flex-direction: column;
     /*minimum height of the body is the full viewport length, so that the absolute bottom of the page will be the footer*/
     min-height: 100vh;
-    margin: 0;
 }
 
 /*customising scrollbar at the right side of the tab*/
@@ -39,6 +39,7 @@ nav{
     height: 81px;
     /*full width of the page*/
     width: 100%;
+    /*center the text*/
     text-align: center;
     box-shadow: 3px, 3px, 5px, rgb(34, 70, 178);
 }
@@ -53,9 +54,9 @@ nav ul li a{
     color: #ffffff;
     /*change width to spread out the text*/
     width: 200px;
-    /*change display mode so that the width is included in the spacing*/
+    /*change display mode so that the width of the whole anchor can be changed including padding*/
     display: block;
-    /*change top and right padding to uhh*/
+    /*add padding*/
     padding: 30px 20px;
     /*increase font size*/
     font-size: 20px;
@@ -75,6 +76,7 @@ nav ul li a:hover{
     transition: 0.5s;
     /*increase letter spacing when hovered over for a cool effect*/
     letter-spacing: 3px;
+    /*make the text go up a little when hovered over*/
     transform: translateY(-5px);
     
 }
@@ -82,9 +84,9 @@ nav ul li a:hover{
 /*MOBILE RESPONSIVE DESIGN FOR THE NAVIGATION*/
 .sidebar{
     min-height: 100%;
-    /*ensures element is in the same place and does not move when scrolled*/
+    /*ensures element is in the same place and does not move when scrolled down*/
     position: fixed;
-    /*make sidebar at the top right*/
+    /*make sidebar at the top left*/
     top: 0;
     left: 0;
     width: 250px;
@@ -114,31 +116,12 @@ nav ul li a:hover{
 .menubutton{
     display:none;
 }
-/*use this class hideOnMobile to hide all the things you dont want to see after 1022px*/
-@media(max-width: 1022px){
-    .hideOnMobile{
-        display: none;
-    }
-    .menubutton{
-        display: block;
-    }
-}
-
-/*after 400px, make the sidebar the full screen*/
-@media(max-width: 400px){
-    .sidebar{
-        width: 100%
-    }
-    /*change the font size of the copyright to smaller size for mobile devices below 400px*/
-    .copyright{
-        font-size: 7px;
-    }
-}
 
 /*------------------------------------------------MAIN----------------------------------------------------------------*/
 main{
     /*allow the content in the main div to grow and push the footer down to the bottom of the main div*/
     flex-grow: 1;
+    
 }
 
 .textcontainer{
@@ -149,12 +132,28 @@ main{
     left: 50%;
     /*move it horizontally to the left by 50% of its own width*/
     transform: translate(-50%, 0%);
+    /*ensure the text stays on the same line*/
+    white-space: nowrap;
 }
 
 .textcontainer h1{
     color: whitesmoke;
+    font-size: 80px;
 }
 
+/*video part of homepage*/
+.page2-home{
+    /*this video should be the lowest layer*/
+    z-index: -1;
+    /*put the video in the center of page*/
+    display: flex;
+    justify-content: center;
+}
+
+.page2-home video{
+    width: 100%;
+    height: auto;
+}
 /*------------------------------------------------FOOTER----------------------------------------------------------------*/
 footer{
     /*footer is not always at the same place, it depends on where content ends*/
@@ -183,7 +182,7 @@ footer{
     /*space the icons out*/
     margin: 10px;
     transition: 0.5s;
-    /*so that the translateY will work in the next part*/
+    /*change display to block and not inline so that the whole icon can be moved up when hovered over*/
     display: block;
 }
 
@@ -197,6 +196,8 @@ footer{
     display: flex;
     flex-direction: row;
     bottom: 0;
+    /*ensure text stays on the same line*/
+    white-space: nowrap;
     
 }
 
@@ -204,4 +205,34 @@ footer{
     /*make colour of text white*/
     color: #ffffff;
     margin: 10px;
+}
+
+/*------------------------------------------------@MEDIA----------------------------------------------------------------*/
+/*use this class hideOnMobile to hide all the things you dont want to see after 1022px*/
+@media(max-width: 1022px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menubutton{
+        display: block;
+    }
+}
+
+@media(max-width: 720px){
+    .textcontainer h1{
+        font-size: 50px;
+    }
+}
+/*after 400px, make the sidebar the full screen*/
+@media(max-width: 400px){   
+    .textcontainer h1{
+        font-size: 30px;
+    }
+    .sidebar{
+        width: 100%
+    }
+    /*change the font size of the copyright to smaller size for mobile devices below 400px*/
+    .copyright{
+        font-size: 7px;
+    }
 }
