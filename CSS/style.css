@@ -1,0 +1,207 @@
+*{
+    /*space inside element between content and border*/
+    padding: 0;
+    /*space outside element between content and border*/
+    margin: 0;
+    /*removes the styling eg.bulletpoints on lists*/
+    list-style: none;
+    /*removes the text deco like underlines on links*/
+    text-decoration: none;
+    /*adds the padding and border to the element's width and height, MIGHTNOT BE USEFUL KIV*/
+    box-sizing: border-box;
+}
+
+/*------------------------------------------------BODY----------------------------------------------------------------*/
+body{
+    font-family: "Archivo Black", sans-serif;
+    display: flex;
+    flex-direction: column;
+    /*minimum height of the body is the full viewport length, so that the absolute bottom of the page will be the footer*/
+    min-height: 100vh;
+    margin: 0;
+}
+
+/*customising scrollbar at the right side of the tab*/
+body::-webkit-scrollbar{
+    width: 5px;
+}
+body::-webkit-scrollbar-track{
+    background: black;
+}
+body::-webkit-scrollbar-thumb{
+    background: #6649b8
+}
+/*------------------------------------------------NAV----------------------------------------------------------------*/
+nav{
+    /*background colour of nav bar*/
+    background: #1a1e2f;
+    /*height of the nav bar*/
+    height: 81px;
+    /*full width of the page*/
+    width: 100%;
+    text-align: center;
+    box-shadow: 3px, 3px, 5px, rgb(34, 70, 178);
+}
+
+nav ul li{
+    /*make everything appear on the same line*/
+    display: inline-block;
+}
+
+nav ul li a{
+    /*change text colour to white*/
+    color: #ffffff;
+    /*change width to spread out the text*/
+    width: 200px;
+    /*change display mode so that the width is included in the spacing*/
+    display: block;
+    /*change top and right padding to uhh*/
+    padding: 30px 20px;
+    /*increase font size*/
+    font-size: 20px;
+    /*center the text so it is equal spacing*/
+    text-align: center;
+}
+
+nav ul li a:hover{
+    /*when hovered over, put a nice glow over the text. this works by using 6 shadows with increasing blur each time, making it seem like neon*/
+    text-shadow: 0 0 10px #ffffff,
+                 0 0 20px #ffffff,
+                 0 0 40px #ffffff,
+                 0 0 80px #ffffff,
+                 0 0 120px #ffffff,
+                 0 0 160px #ffffff;
+    /*transition into the background colour for it to be smoother*/
+    transition: 0.5s;
+    /*increase letter spacing when hovered over for a cool effect*/
+    letter-spacing: 3px;
+    transform: translateY(-5px);
+    
+}
+
+/*MOBILE RESPONSIVE DESIGN FOR THE NAVIGATION*/
+.sidebar{
+    min-height: 100%;
+    /*ensures element is in the same place and does not move when scrolled*/
+    position: fixed;
+    /*make sidebar at the top right*/
+    top: 0;
+    left: 0;
+    width: 250px;
+    /*determines the stacking property of elements, this sidebar will be on top everything else so it is 999*/
+    z-index: 999;
+    background-color: #1a1e2fa9;
+    /*ensure it is a column*/
+    display: none;
+    flex-direction: column;
+    /*position from top of page*/
+    align-items: flex-start;
+    justify-content: flex-start;
+    /*apply blur filter to items behind the sidebar*/
+    backdrop-filter: blur(10px);
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a{
+    text-align: left;
+    width: 100%;
+}
+
+/*do not display hamburger menu on desktop because there is no need*/
+.menubutton{
+    display:none;
+}
+/*use this class hideOnMobile to hide all the things you dont want to see after 1022px*/
+@media(max-width: 1022px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menubutton{
+        display: block;
+    }
+}
+
+/*after 400px, make the sidebar the full screen*/
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%
+    }
+    /*change the font size of the copyright to smaller size for mobile devices below 400px*/
+    .copyright{
+        font-size: 7px;
+    }
+}
+
+/*------------------------------------------------MAIN----------------------------------------------------------------*/
+main{
+    /*allow the content in the main div to grow and push the footer down to the bottom of the main div*/
+    flex-grow: 1;
+}
+
+.textcontainer{
+    /*dont want position to change so it is absolute*/
+    position: absolute;
+    /*40% from top and 50% from left so it is centre of the screen but right above harry's head*/
+    top: 40%;
+    left: 50%;
+    /*move it horizontally to the left by 50% of its own width*/
+    transform: translate(-50%, 0%);
+}
+
+.textcontainer h1{
+    color: whitesmoke;
+}
+
+/*------------------------------------------------FOOTER----------------------------------------------------------------*/
+footer{
+    /*footer is not always at the same place, it depends on where content ends*/
+    position: relative;
+    width: 100%;
+    background:#1a1e2f;
+    min-height: 100px;
+    /*ensure all the social media icons and text are centered*/ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*there will be 2 lists, one for social media icons and one for copyright, so for the copyright to be below the social media icons, a column is used to order the two lists*/
+    flex-direction: column;
+    /*use readable, clean font*/
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+}
+
+.socialmedia{
+    /*ensure all the social media icons and text are in a row*/ 
+    display: flex;
+    flex-direction: row;
+}
+
+.socialmedia a{
+    /*space the icons out*/
+    margin: 10px;
+    transition: 0.5s;
+    /*so that the translateY will work in the next part*/
+    display: block;
+}
+
+.socialmedia a:hover{
+    /*make the icon go up a little when hovered over*/
+    transform: translateY(-10px);
+}
+
+.copyright{
+    /*make it a row and put it at the bottom*/
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    
+}
+
+.copyright a{
+    /*make colour of text white*/
+    color: #ffffff;
+    margin: 10px;
+}
