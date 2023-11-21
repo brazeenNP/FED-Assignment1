@@ -7,8 +7,6 @@
     list-style: none;
     /*removes the text deco like underlines on links*/
     text-decoration: none;
-    /*adds the padding and border to the element's width and height, MIGHTNOT BE USEFUL KIV*/
-    box-sizing: border-box;
 }
 
 /*------------------------------------------------BODY----------------------------------------------------------------*/
@@ -19,6 +17,7 @@ body{
     flex-direction: column;
     /*minimum height of the body is the full viewport length, so that the absolute bottom of the page will be the footer*/
     min-height: 100vh;
+    overflow-x:hidden;
 }
 
 /*customising scrollbar at the right side of the tab*/
@@ -45,7 +44,7 @@ nav{
 }
 
 nav ul li{
-    /*make everything appear on the same line*/
+    /*make everything appear on the same line, while being able to add spacing*/
     display: inline-block;
 }
 
@@ -119,9 +118,12 @@ nav ul li a:hover{
 
 /*------------------------------------------------MAIN----------------------------------------------------------------*/
 main{
-    /*allow the content in the main div to grow and push the footer down to the bottom of the main div*/
+    background: #000000;
     flex-grow: 1;
-    
+}
+
+.page1-home image{
+    min-height: 100vh;
 }
 
 .textcontainer{
@@ -138,7 +140,13 @@ main{
 
 .textcontainer h1{
     color: whitesmoke;
-    font-size: 80px;
+    font-size: 5vw;
+    text-shadow: 0 0 10px #ffffff,
+                 0 0 20px #ff00ff,
+                 0 0 40px #7700b3,
+                 0 0 80px #5500ff,
+                 0 0 120px #ffffff;
+    transition: 0.5s;
 }
 
 /*video part of homepage*/
@@ -151,16 +159,35 @@ main{
 }
 
 .page2-home video{
-    width: 100%;
-    height: auto;
+    min-height: 100vh;
+}
+
+#page2-homepicture{ 
+    align-self: center;
+    position: absolute;
+    left: 50%;
+    width: 25vw;
+    z-index: 999;
+}
+
+.textcontainer2{
+    position:absolute;
+    left: 15.5%;
+    transform: translateY(1300%);
+
+}   
+
+.textcontainer2 h1{
+    color: #ffffff;
 }
 /*------------------------------------------------FOOTER----------------------------------------------------------------*/
 footer{
     /*footer is not always at the same place, it depends on where content ends*/
     position: relative;
     width: 100%;
+    bottom: 0;
     background:#1a1e2f;
-    min-height: 100px;
+    min-height: 3vh;
     /*ensure all the social media icons and text are centered*/ 
     display: flex;
     justify-content: center;
@@ -169,7 +196,7 @@ footer{
     flex-direction: column;
     /*use readable, clean font*/
     font-family: 'Lato', sans-serif;
-    font-size: 12px;
+    font-size: 1vw;
 }
 
 .socialmedia{
@@ -215,24 +242,16 @@ footer{
     }
     .menubutton{
         display: block;
-    }
+    }   
+
 }
 
-@media(max-width: 720px){
-    .textcontainer h1{
-        font-size: 50px;
-    }
-}
 /*after 400px, make the sidebar the full screen*/
 @media(max-width: 400px){   
-    .textcontainer h1{
-        font-size: 30px;
-    }
     .sidebar{
         width: 100%
     }
-    /*change the font size of the copyright to smaller size for mobile devices below 400px*/
-    .copyright{
-        font-size: 7px;
+    .textcontainer{
+        top:20%;
     }
 }

@@ -38,10 +38,12 @@
     </nav>
 
     <script>
+        //to show the sidebar when the width of the viewport gets too small by changing the display to its intended mode which is flex
         function showSidebar(){
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'flex'
         }
+        //to hide the sidebar when the width of the viewport becomes a big enough size for all the words to be displayed, changing the display to none and hiding it from view
         function hideSidebar(){
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
@@ -56,6 +58,10 @@
             </div> 
         </div>
         <div class="page2-home">
+            <image id ="page2-homepicture" src="Images, Videos and Graphics/harryshousecover.png" ></image>
+            <div class="textcontainer2">
+                <h1>HARRY'S HOUSE</h1>
+            </div>
             <video autoplay loop muted playsinline src="Images, Videos and Graphics/page2-homepage video.mp4" class="backgroundvideo"></video>
         </div>
         
