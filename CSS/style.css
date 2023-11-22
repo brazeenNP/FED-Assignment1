@@ -21,6 +21,8 @@ body{
     flex-direction: column;
     /*minimum height of the body is the full viewport length, so that the absolute bottom of the page will be the footer*/
     min-height: 100vh;
+    /*default page colours are black*/
+    background: #000000;
 }
 
 /*customising scrollbar at the right side of the tab*/
@@ -232,9 +234,11 @@ nav ul li a:hover{
     /*make up for the header's space*/
     padding-top: 100px;
     background-color: #000000;
-    /*WHY DOESNT THIS WORK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-    background-image: url(Images,%20Videos%20and%20Graphics/harrynewsbackground.jpeg);
+    /*change background image to something really dark for some personality*/
+    background-image: url('../Images,%20Videos%20and%20Graphics/harrynewsbackground.jpg');
+    /*repeat for below part of page*/
     background-repeat: repeat;
+    /*center and make sure full picture can be seen*/
     background-position: center;
     background-size: cover;
 }
@@ -253,8 +257,8 @@ nav ul li a:hover{
     width:75vw;   
     height: 1px;
     background: #ffffff;;
-    /*spacing between top and bottom*/
-    margin: 50px 0;
+    /*spacing to make it look clean*/
+    margin-top: 50px ;
 }
 .news-content{
     /*i want to have space between my elements (news containers)*/
@@ -268,6 +272,8 @@ nav ul li a:hover{
 .news-container1{
     display: flex;
     justify-content: center;
+    /*space it out from the previous article*/
+    padding-top: 50px;
 }
 
 .news-image1{
@@ -275,11 +281,15 @@ nav ul li a:hover{
 }
 
 .news-content1{
+    background: #000000;
     color: #ffffff;
     /*make it take up less space*/
     width: 30vw;
+    /*ensure there is space between text and img*/
     padding-left: 20px;
-
+    /*ensure there is space from top and sides of text box to the text*/
+    padding-top: 10px;
+    padding-right: 15px;
 }
 
 /*content of news 1 excluding header*/
@@ -287,8 +297,8 @@ nav ul li a:hover{
     font-family: "Lato", sans-serif;
     /*separate the lines to make it cleaner looking*/
     line-height: 1.5;
-
 }
+
 .news-container2{
     display: flex;
     justify-content: center;
@@ -303,9 +313,33 @@ nav ul li a:hover{
 .news-content2{
     /*switch the order because i want alternating side one picture one text*/
     order: 1;
+    background-color: #000000;
     color: #ffffff;
     width: 30vw;
     padding-right: 20px;
+    /*ensure there is space from top and sidesof text box to the text*/
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.news-readmorebtncontainer{
+    padding-top: 15px;
+}
+.news-readmorebtn{
+    font-family: "Archivo Black", sans-serif;
+    background: #000000;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    /*spacing*/
+    letter-spacing: 2px;
+    padding: 0.7em 1em;
+    margin: 0.25em;
+    /*transition for hover animation*/
+    transition: 0.5s;
+}
+.news-readmorebtn:hover{
+    background: #ffffff;
+    color: #000000;
 }
 /*------------------------------------------------FOOTER----------------------------------------------------------------*/
 footer{
