@@ -123,7 +123,7 @@ nav ul li a:hover{
 }
 
 /*------------------------------------------------MAIN HOME----------------------------------------------------------------*/
-main{
+.home{
     background: #000000;
     flex-grow: 1;
     overflow: hidden;
@@ -222,6 +222,90 @@ main{
                  0 0 80px #ffffff;
     background: #fcc95a;
     color: #000000;
+}
+/*------------------------------------------------MAIN NEWS----------------------------------------------------------------*/
+
+.news{
+    /*i want the containers to be in a column format*/
+    display: flex;
+    flex-direction: column;
+    /*make up for the header's space*/
+    padding-top: 100px;
+    background-color: #000000;
+    /*WHY DOESNT THIS WORK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    background-image: url(Images,%20Videos%20and%20Graphics/harrynewsbackground.jpeg);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.news-heading{
+    /*put the heading in the center of page*/
+    align-self: center;
+    color: #ffffff;
+
+}
+
+/*this is the small line below the heading*/
+.news-divider{
+    align-self: center;
+    /*75% width of whole pg*/
+    width:75vw;   
+    height: 1px;
+    background: #ffffff;;
+    /*spacing between top and bottom*/
+    margin: 50px 0;
+}
+.news-content{
+    /*i want to have space between my elements (news containers)*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.news-container1{
+    display: flex;
+    justify-content: center;
+}
+
+.news-image1{
+    height: 45vh;
+}
+
+.news-content1{
+    color: #ffffff;
+    /*make it take up less space*/
+    width: 30vw;
+    padding-left: 20px;
+
+}
+
+/*content of news 1 excluding header*/
+.news-content1 p, .news-content2 p{
+    font-family: "Lato", sans-serif;
+    /*separate the lines to make it cleaner looking*/
+    line-height: 1.5;
+
+}
+.news-container2{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+.news-image2{
+    /*opposite order because i want alternating side one picture one text*/
+    order: 2;
+    height: 45vh;
+}
+
+.news-content2{
+    /*switch the order because i want alternating side one picture one text*/
+    order: 1;
+    color: #ffffff;
+    width: 30vw;
+    padding-right: 20px;
 }
 /*------------------------------------------------FOOTER----------------------------------------------------------------*/
 footer{
