@@ -9,6 +9,10 @@
     text-decoration: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /*------------------------------------------------BODY----------------------------------------------------------------*/
 body{
     font-family: "Archivo Black", sans-serif;
@@ -17,7 +21,6 @@ body{
     flex-direction: column;
     /*minimum height of the body is the full viewport length, so that the absolute bottom of the page will be the footer*/
     min-height: 100vh;
-    overflow-x:hidden;
 }
 
 /*customising scrollbar at the right side of the tab*/
@@ -32,6 +35,9 @@ body::-webkit-scrollbar-thumb{
 }
 /*------------------------------------------------NAV----------------------------------------------------------------*/
 nav{
+    /*when the person scrolls down, the menu stays on top for easy access*/
+    position:fixed;
+    z-index: 1000;
     /*background colour of nav bar*/
     background: #1a1e2f;
     /*height of the nav bar*/
@@ -116,37 +122,44 @@ nav ul li a:hover{
     display:none;
 }
 
-/*------------------------------------------------MAIN----------------------------------------------------------------*/
+/*------------------------------------------------MAIN HOME----------------------------------------------------------------*/
 main{
     background: #000000;
     flex-grow: 1;
+    overflow: hidden;
 }
 
-.page1-home image{
-    min-height: 100vh;
+.page1-home{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
 
-.textcontainer{
+/*this is the top image of harry styles*/
+.page1-home img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page1-home .hometextcontainer{
     /*dont want position to change so it is absolute*/
     position: absolute;
-    /*40% from top and 50% from left so it is centre of the screen but right above harry's head*/
-    top: 40%;
-    left: 50%;
-    /*move it horizontally to the left by 50% of its own width*/
-    transform: translate(-50%, 0%);
+    align-self: center;
     /*ensure the text stays on the same line*/
     white-space: nowrap;
 }
 
-.textcontainer h1{
+.hometextcontainer h1{
+    /*set nice effects and font size*/
     color: whitesmoke;
-    font-size: 5vw;
+    font-size: 7vw;
     text-shadow: 0 0 10px #ffffff,
                  0 0 20px #ff00ff,
                  0 0 40px #7700b3,
                  0 0 80px #5500ff,
                  0 0 120px #ffffff;
-    transition: 0.5s;
 }
 
 /*video part of homepage*/
@@ -162,23 +175,53 @@ main{
     min-height: 100vh;
 }
 
-#page2-homepicture{ 
+.page2-homepicture{ 
+    /*put in the middle of the video*/
     align-self: center;
     position: absolute;
-    left: 50%;
-    width: 25vw;
+    width: 350px;
+    /*make sure it is on top*/
     z-index: 999;
 }
 
-.textcontainer2{
-    position:absolute;
-    left: 15.5%;
-    transform: translateY(1300%);
-
+.page2-hometext{
+    color: #ffffff;
+    position: absolute;
+    align-self: flex-end;
+    transform: translateY(-120px);
+    font-size: 3vw;
+    color: #fcc95a;
+    letter-spacing: 1px;
+    text-shadow: 2px 0 #8e4a11, -2px 0 #8e4a11,0 -2px #8e4a11, 1px 1px #8e4a11, -1px -1px #8e4a11, 1px -1px #8e4a11, -1px 1px #8e4a11;
 }   
 
-.textcontainer2 h1{
+.page2-homelistenbtn{
+    /*start the button at the bottom of the page then i will move it up a little with transform*/
+    align-self: flex-end;
+    position: absolute;
+    transform: translateY(-80px);
+    /*font, colour, letter spacing, and outline text*/
     color: #ffffff;
+    background: #8e4a11;
+    letter-spacing: 1px;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 14px;
+    /*some styling to make the button a pill shape*/
+    padding: 0.5em 1em;
+    margin: 0.25em;
+    border-radius: 1.5em;
+    /*transition for the hover effects later*/
+    transition: 0.5s;
+}
+
+.page2-homelistenbtn:hover{
+    letter-spacing: 1.5px;
+    box-shadow: 0 0 10px #fcc95a,
+                 0 0 20px #ffffff,
+                 0 0 40px #fcc95a,
+                 0 0 80px #ffffff;
+    background: #fcc95a;
+    color: #000000;
 }
 /*------------------------------------------------FOOTER----------------------------------------------------------------*/
 footer{
@@ -187,7 +230,7 @@ footer{
     width: 100%;
     bottom: 0;
     background:#1a1e2f;
-    min-height: 3vh;
+    min-height: 200px;
     /*ensure all the social media icons and text are centered*/ 
     display: flex;
     justify-content: center;
@@ -236,22 +279,63 @@ footer{
 
 /*------------------------------------------------@MEDIA----------------------------------------------------------------*/
 /*use this class hideOnMobile to hide all the things you dont want to see after 1022px*/
-@media(max-width: 1022px){
+@media(max-width: 1221px){
     .hideOnMobile{
         display: none;
     }
     .menubutton{
         display: block;
     }   
-
+}
+@media(max-width: 768px){
+    .page2-hometext{
+        transform:translateY(-22vh);
+    }
+    .page2-homelistenbtn{
+        transform: translateY(-15vh);
+    }
+    .page2-hometext{
+        font-size: 4vw;
+    }
+}
+@media(max-width:650px){
+    .page2-hometext{
+        font-size: 5vw;
+    }
 }
 
+@media(max-width: 500px){
+    .page2-homepicture{
+        width: 75vw;
+    }
+    .page2-hometext{
+        transform: translateY(-21vh);
+    }
+    .page2-homelistenbtn{
+        transform:translateY(-12vh);
+    }
+}
 /*after 400px, make the sidebar the full screen*/
 @media(max-width: 400px){   
     .sidebar{
         width: 100%
     }
-    .textcontainer{
+    .hometextcontainer{
         top:20%;
+    }
+    .page2-hometext{
+        transform: translateY(-27vh);
+    }
+    .page2-homelistenbtn{
+        transform: translateY(-20vh);
+    }
+}
+
+@media(max-width: 350px){
+    .page2-hometext{
+        transform:translateY(-30vh);
+    }
+    .page1-home image{
+        align-self:flex-end;
     }
 }
