@@ -258,9 +258,10 @@ nav ul li a:hover{
     height: 1px;
     background: #ffffff;;
     /*spacing to make it look clean*/
-    margin-top: 50px ;
+    margin-top: 50px;
+    margin-bottom: 25px;
 }
-.news-content{
+.news-wrapper{
     /*i want to have space between my elements (news containers)*/
     display: flex;
     flex-direction: column;
@@ -273,7 +274,8 @@ nav ul li a:hover{
     display: flex;
     justify-content: center;
     /*space it out from the previous article*/
-    padding-top: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .news-image1{
@@ -283,6 +285,7 @@ nav ul li a:hover{
 .news-content1{
     background: #000000;
     color: #ffffff;
+    font-size: 1vw;
     /*make it take up less space*/
     width: 30vw;
     /*ensure there is space between text and img*/
@@ -290,6 +293,8 @@ nav ul li a:hover{
     /*ensure there is space from top and sides of text box to the text*/
     padding-top: 10px;
     padding-right: 15px;
+    /*same height as image*/
+    max-height: 45vh;
 }
 
 /*content of news 1 excluding header*/
@@ -302,7 +307,8 @@ nav ul li a:hover{
 .news-container2{
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 .news-image2{
     /*opposite order because i want alternating side one picture one text*/
@@ -320,11 +326,16 @@ nav ul li a:hover{
     /*ensure there is space from top and sidesof text box to the text*/
     padding-top: 10px;
     padding-left: 15px;
+    /*limit max width so it does not expand too much if photo too large*/
+    max-width: 70vw;
+    /*same height as image*/
+    max-height: 45vh;
 }
 
 .news-readmorebtncontainer{
     padding-top: 15px;
 }
+
 .news-readmorebtn{
     font-family: "Archivo Black", sans-serif;
     background: #000000;
@@ -414,6 +425,9 @@ footer{
     }
     .page2-hometext{
         font-size: 4vw;
+    }
+    .news-container1, .news-container2{
+        flex-direction: column;
     }
 }
 @media(max-width:650px){
