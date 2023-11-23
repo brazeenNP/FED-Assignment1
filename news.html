@@ -11,6 +11,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Teko:wght@300&display=swap');
         /*lato*/
         @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        /*archivo*/
+        @import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
     </style>
 </head>
 <body>
@@ -55,7 +57,15 @@
         <div class="news-heading">
             <h1>NEWS</h1>
         </div>
+        <!--make an empty div for divider so we can give it colours and width and height-->
         <div class="news-divider"></div>
+        <p class="news-filtertext">FILTER BY</p>
+        <div class="news-filter">
+            <input type="checkbox" id="news-tourbtn" onchange="toggleTourarticles()" checked>
+            <label for="news-tourbtn" class="fakebtn">TOUR</label>
+            <input type="checkbox" id="news-albumbtn" onchange="toggleAlbumarticles()" checked>
+            <label for="news-albumbtn" class="fakebtn">ALBUM</label>
+        </div>
         <div class="news-wrapper">
             <div class="news-container1">
                 <img class="news-image1" src="Images, Videos and Graphics/harrynews1.jpg">
@@ -134,9 +144,35 @@
                 </div>  
             </div>
         </div>
-
-        
     </main>
+
+    <script>
+        //functions
+        function toggleTourarticles(){
+            const tourcheck = document.querySelector('#news-tourbtn')
+            const tourarticles = document.querySelector('.news-container1')
+            if (tourcheck.checked) {
+                //if checked, change to flex display so it can be seen
+                tourarticles.style.display = 'flex';
+            }
+            else{
+                //or else make it invisible
+                tourarticles.style.display = 'none';
+            }
+        }
+        function toggleAlbumarticles(){
+            const albumcheck = document.querySelector('#news-albumbtn')
+            const albumarticles = document.querySelector('.news-container2')
+            if (albumcheck.checked) {
+                //if checked, change to flex display so it can be seen
+                albumarticles.style.display = 'flex';
+            }
+            else{
+                //or else make it invisible
+                albumarticles.style.display = 'none';
+            }
+        }
+    </script>
     <footer>
         <ul class="socialmedia">
             <li><a href="https://www.facebook.com/harrystyles/"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" height = "30" viewBox="0 0 512 512"><path fill=#ffffff d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z" fill-rule="evenodd"/></svg></a></li>

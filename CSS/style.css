@@ -247,7 +247,8 @@ nav ul li a:hover{
     /*put the heading in the center of page*/
     align-self: center;
     color: #ffffff;
-
+    /*make it bigger*/
+    font-size: 1.5vw;
 }
 
 /*this is the small line below the heading*/
@@ -261,6 +262,51 @@ nav ul li a:hover{
     margin-top: 50px;
     margin-bottom: 25px;
 }
+
+.news-filtertext{
+    font-size: 1.5vw;
+    color:#ffffff;
+    /* put it in the middle of screen above buttons*/
+    align-self: center;
+    /*put some padding to spread out the button and the words*/
+    padding-bottom: 20px;
+}
+
+.news-filter{
+    display: flex;
+    justify-content: center;
+}
+
+.fakebtn{
+    font-family: "Archivo", sans-serif;
+    color:#ffffff;
+    border: 2px solid #ffffff;
+    /*make pill shape*/
+    padding: 0.5em 1em;
+    margin: 0.25em;
+    border-radius: 1.5em;
+    /*so they know they can click on this*/
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*change the colour when the fake button or the checkbox is pressed*/
+input:checked + .fakebtn{
+    background: #ffffff;
+    color: #000000;
+}
+
+.news-filteralbumbtn:hover, .news-filtertourbtn:hover{
+    color:#000000;
+    background: #ffffff;
+
+}
+
+/*so they do not see the checkbox*/
+input{
+    display: none;
+}
+
 .news-wrapper{
     /*i want to have space between my elements (news containers)*/
     display: flex;
@@ -276,6 +322,7 @@ nav ul li a:hover{
     /*space it out from the previous article*/
     padding-top: 25px;
     padding-bottom: 25px;
+
 }
 
 .news-image1{
