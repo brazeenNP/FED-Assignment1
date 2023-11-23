@@ -248,7 +248,7 @@ nav ul li a:hover{
     align-self: center;
     color: #ffffff;
     /*make it bigger*/
-    font-size: 1.5vw;
+    font-size: 30px;
 }
 
 /*this is the small line below the heading*/
@@ -264,7 +264,7 @@ nav ul li a:hover{
 }
 
 .news-filtertext{
-    font-size: 1.5vw;
+    font-size: 25px;
     color:#ffffff;
     /* put it in the middle of screen above buttons*/
     align-self: center;
@@ -322,17 +322,17 @@ input{
     /*space it out from the previous article*/
     padding-top: 25px;
     padding-bottom: 25px;
-
+    background: #000000;
+    width: 63vw;
 }
+
 
 .news-image1{
     height: 45vh;
 }
 
 .news-content1{
-    background: #000000;
     color: #ffffff;
-    font-size: 1vw;
     /*make it take up less space*/
     width: 30vw;
     /*ensure there is space between text and img*/
@@ -356,6 +356,8 @@ input{
     justify-content: center;
     padding-top: 25px;
     padding-bottom: 25px;
+    background: #000000;
+    width: 63vw;
 }
 .news-image2{
     /*opposite order because i want alternating side one picture one text*/
@@ -366,7 +368,6 @@ input{
 .news-content2{
     /*switch the order because i want alternating side one picture one text*/
     order: 1;
-    background-color: #000000;
     color: #ffffff;
     width: 30vw;
     padding-right: 20px;
@@ -415,7 +416,7 @@ footer{
     flex-direction: column;
     /*use readable, clean font*/
     font-family: 'Lato', sans-serif;
-    font-size: 1vw;
+    font-size: 10px;
 }
 
 .socialmedia{
@@ -463,7 +464,30 @@ footer{
         display: block;
     }   
 }
-@media(max-width: 768px){
+
+@media(max-width: 1080px){
+    .news-container1, .news-container2{
+        flex-direction: column;
+    }
+    .news-container1, .news-container2{
+        align-items: center;
+    }
+    .news-imagecontainer{
+        justify-content: center;
+        overflow: hidden;
+        width: 500px;
+    }
+
+    .news-content1, .news-content2{
+        width: 500px;
+    }
+
+    .news-content2{
+        order: 2;
+    }
+}
+/*closer to tablet size screen*/
+@media(max-width: 790px){
     .page2-hometext{
         transform:translateY(-22vh);
     }
@@ -474,16 +498,29 @@ footer{
         font-size: 4vw;
     }
     .news-container1, .news-container2{
-        flex-direction: column;
+        width: 75vw;
+    }
+    .news-content1, .news-content2{
+        font-size: 14px;
     }
 }
+
 @media(max-width:650px){
     .page2-hometext{
         font-size: 5vw;
     }
+    .news-content1, .news-content2{
+        width: 350px;
+    }
+    .news-imagecontainer{
+        width: 350px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
 }
 
-@media(max-width: 500px){
+@media(max-width: 530px){
     .page2-homepicture{
         width: 75vw;
     }
@@ -492,6 +529,15 @@ footer{
     }
     .page2-homelistenbtn{
         transform:translateY(-12vh);
+    }
+    .news-content1, .news-content2{
+        width: 300px;
+    }
+    .news-imagecontainer{
+        width: 300px;
+    }
+    .copyright{
+        flex-direction: column;
     }
 }
 /*after 400px, make the sidebar the full screen*/
@@ -507,6 +553,13 @@ footer{
     }
     .page2-homelistenbtn{
         transform: translateY(-20vh);
+    }
+    .news-content1, .news-content2{
+        width: 200px;
+        font-size: 12px;
+    }
+    .news-imagecontainer{
+        width: 200px;
     }
 }
 
