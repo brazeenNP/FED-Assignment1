@@ -150,26 +150,32 @@
         //functions
         function toggleTourarticles(){
             const tourcheck = document.querySelector('#news-tourbtn')
-            const tourarticles = document.querySelector('.news-container1')
-            if (tourcheck.checked) {
-                //if checked, change to flex display so it can be seen
-                tourarticles.style.display = 'flex';
-            }
-            else{
-                //or else make it invisible
-                tourarticles.style.display = 'none';
+            //get a list of the elements with news-container1 class
+            const tourarticles = document.querySelectorAll('.news-container1')
+            for (let i = 0; i < tourarticles.length; i++) {
+                if (tourcheck.checked) {
+                    //if checked, change to flex display so it can be seen
+                    tourarticles[i].style.display = 'flex';
+                }
+                else{
+                    //or else make it invisible
+                    tourarticles[i].style.display = 'none';
+                }
             }
         }
         function toggleAlbumarticles(){
             const albumcheck = document.querySelector('#news-albumbtn')
-            const albumarticles = document.querySelector('.news-container2')
-            if (albumcheck.checked) {
-                //if checked, change to flex display so it can be seen
-                albumarticles.style.display = 'flex';
-            }
-            else{
-                //or else make it invisible
-                albumarticles.style.display = 'none';
+            //get a list of the elements with news-container2 class
+            const albumarticles = document.querySelectorAll('.news-container2')
+            for (let i = 0; i < albumarticles.length; i++) {
+                if (albumcheck.checked) {
+                    //if checked, change to flex display so it can be seen
+                    albumarticles[i].style.display = 'flex';
+                }
+                else{
+                    //or else make it invisible
+                    albumarticles[i].style.display = 'none';
+                }
             }
         }
     </script>
