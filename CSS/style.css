@@ -35,6 +35,18 @@ body::-webkit-scrollbar-track{
 body::-webkit-scrollbar-thumb{
     background: #6649b8
 }
+
+/*this is the small line below the heading*/
+.divider{
+    align-self: center;
+    /*75% width of whole pg*/
+    width:75vw;   
+    height: 1px;
+    background: #ffffff;;
+    /*spacing to make it look clean*/
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
 /*------------------------------------------------NAV----------------------------------------------------------------*/
 nav{
     /*when the person scrolls down, the menu stays on top for easy access*/
@@ -249,18 +261,6 @@ nav ul li a:hover{
     color: #ffffff;
     /*make it bigger*/
     font-size: 30px;
-}
-
-/*this is the small line below the heading*/
-.news-divider{
-    align-self: center;
-    /*75% width of whole pg*/
-    width:75vw;   
-    height: 1px;
-    background: #ffffff;;
-    /*spacing to make it look clean*/
-    margin-top: 50px;
-    margin-bottom: 25px;
 }
 
 .news-filtertext{
