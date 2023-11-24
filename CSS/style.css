@@ -36,17 +36,7 @@ body::-webkit-scrollbar-thumb{
     background: #6649b8
 }
 
-/*this is the small line below the heading*/
-.divider{
-    align-self: center;
-    /*75% width of whole pg*/
-    width:75vw;   
-    height: 1px;
-    background: #ffffff;;
-    /*spacing to make it look clean*/
-    margin-top: 50px;
-    margin-bottom: 25px;
-}
+
 /*------------------------------------------------NAV----------------------------------------------------------------*/
 nav{
     /*when the person scrolls down, the menu stays on top for easy access*/
@@ -263,6 +253,18 @@ nav ul li a:hover{
     font-size: 30px;
 }
 
+/*this is the small line below the heading*/
+.news-divider{
+    align-self: center;
+    /*75% width of whole pg*/
+    width:75vw;   
+    height: 1px;
+    background: #ffffff;
+    /*spacing to make it look clean*/
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
 .news-filtertext{
     font-size: 25px;
     color:#ffffff;
@@ -291,7 +293,7 @@ nav ul li a:hover{
 }
 
 /*change the colour when the fake button or the checkbox is pressed*/
-input:checked + .fakebtn{
+.news-btn:checked + .fakebtn{
     background: #ffffff;
     color: #000000;
 }
@@ -303,7 +305,7 @@ input:checked + .fakebtn{
 }
 
 /*so they do not see the checkbox*/
-input{
+.news-btn{
     display: none;
 }
 
@@ -399,6 +401,203 @@ input{
 .news-readmorebtn:hover{
     background: #ffffff;
     color: #000000;
+}
+
+/*------------------------------------------------MAIN TOUR----------------------------------------------------------------*/
+
+
+.tour{
+    background: #ffffff;
+    /*take into account the nav space*/
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*change background image to something really dark for some personality*/
+    background-image: url('../Images,%20Videos%20and%20Graphics/harrytourbackground.jpg');
+    /*repeat for below part of page*/
+    background-repeat: repeat;
+    /*center and make sure full picture can be seen*/
+    background-position: center;
+    background-size: cover;
+}
+
+.tour-heading{
+    /*put the heading in the center of page*/
+    align-self: center;
+    color: #ffffff;
+    /*make it bigger*/
+    font-size: 30px;
+}
+
+
+.tour-divider{
+    background: #ffffff;
+    align-self: center;
+    /*75% width of whole pg*/
+    width:75vw;   
+    height: 1px;
+    /*spacing to make it look clean*/
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.tour-sliderheading{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+    color: #ffffff;
+}
+
+.tour-sliderwrapper{
+    position: relative;
+    /*i am trying rem units in the hope that it will make it easier to be responsive*/
+    max-width: 48rem;
+    /*so the container will be in the center of page horizontally*/
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+ /* Hide scrollbar for Chrome, Safari and Opera */
+ .tour-slider::-webkit-scrollbar {
+    display: none;
+ }
+.tour-slider{
+    display: flex;
+    overflow-x: auto;
+    /*to have like a snappy scroll effect but on the x axis (which is how the photos will be scrolled through, horizontally)*/
+    scroll-snap-type: x mandatory;
+    /*for nice effect*/
+    box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.25);
+    /*more softer edges on the slider*/
+    border-radius: 0.5rem; 
+    /*hide scrollbar again on different browsers*/
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.tour-slider img{
+    /*make every image an equal size in the container*/
+    flex-grow: 1;
+    /*every image will keep the width they need*/
+    flex-shrink: 0;
+    /*initial size of 100%*/
+    flex-basis: 100%;
+    /*so the scroll will snap to each image*/
+    scroll-snap-align: start;
+    /*maintain aspect ratio even if change width*/
+    object-fit: cover;
+}
+
+.tour-slidernav{
+    display: flex;
+    column-gap: 1rem;
+    /*slider nav should stay in the same place*/
+    position: absolute;
+    bottom: 2rem;
+    /*put it in the middle*/
+    left: 50%;
+    transform: translateX(-50%);
+    /*ensure its on top of slider always*/
+    z-index: 1;
+}
+
+.tour-slidernav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    /*make it a circle*/
+    border-radius: 50%;
+    background: #ffffff;
+    opacity: 0.65;
+    transition: opacity ease 0.25s;
+}
+
+/*hover effects to know which one is being selected*/
+.tour-slidernav a:hover{
+    opacity: 100%;
+}
+
+.tour-info{
+    background: #b5a0cb;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.tour-info img{
+    max-width: 40rem;
+}
+
+.tour-info h2{
+    padding: 20px;
+    color: #242424;
+}
+
+/* spacing */
+table {
+    table-layout: fixed;
+    width: 60%;
+    border-collapse: collapse;
+}
+  
+/*give each header an equal amount of space*/
+thead th:nth-child(1){
+    width: 33%;
+}
+  
+thead th:nth-child(2){
+    width: 33%;
+}
+  
+thead th:nth-child(3){
+    width: 33%;
+}
+  
+th, td {
+    /*spread out the rows from one another (vertically)*/
+    padding: 10px;
+}
+  
+td{
+    text-align: center;
+    font-family: "Lato", sans-serif;
+}
+
+/*buy tickets buttons*/
+.tour-buytickets{
+    font-family: "Archivo Black", sans-serif;
+    background:none;
+    color: #242424;
+    border: 2px solid #242424;
+    /*spacing*/
+    letter-spacing: 2px;
+    padding: 0.5em 0.5em;
+    margin: 0.25em;
+    /*transition for hover animation*/
+    transition: 0.5s;
+}
+
+.tour-buytickets:hover{
+    background: #242424;
+    color: #ffffff;
+}
+
+.tour-contactheading{
+    /*space a little from the top table*/
+    padding-top: 50px;
+    color: #242424;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news-contactform{
+    width: 100%;
+    position: relative;
 }
 /*------------------------------------------------FOOTER----------------------------------------------------------------*/
 footer{

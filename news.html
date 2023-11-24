@@ -58,12 +58,13 @@
             <h1>NEWS</h1>
         </div>
         <!--make an empty div for divider so we can give it colours and width and height-->
-        <div class="divider"></div>
+        <div class="news-divider"></div>
         <p class="news-filtertext">FILTER BY</p>
         <div class="news-filter">
-            <input type="checkbox" id="news-tourbtn" onchange="toggleTourarticles()" checked>
+            <!--ensure all the checkboxes are checked by default, showing all articles-->
+            <input type="checkbox" id="news-tourbtn" class="news-btn" onchange="toggleTourarticles()" checked>
             <label for="news-tourbtn" class="fakebtn">TOUR</label>
-            <input type="checkbox" id="news-albumbtn" onchange="toggleAlbumarticles()" checked>
+            <input type="checkbox" id="news-albumbtn" class="news-btn" onchange="toggleAlbumarticles()" checked>
             <label for="news-albumbtn" class="fakebtn">ALBUM</label>
         </div>
         <div class="news-wrapper">
@@ -78,7 +79,7 @@
                           starting on March...</p>
                     <div class="news-readmorebtncontainer">
                         <!--_blank so it opens in new tab, this is a read more button that will redirect to the actual article-->
-                        <button target="_blank" class="news-readmorebtn" onclick="window.location.href='https://www.nme.com/en_asia/news/music/harry-styles-love-on-tour-asia-dates-tickets-singapore-manila-bangkok-3349174';">READ MORE</button>
+                        <button target="_blank" class="news-readmorebtn" onclick="window.open('https://www.nme.com/en_asia/news/music/harry-styles-love-on-tour-asia-dates-tickets-singapore-manila-bangkok-3349174', '_blank');">READ MORE</button>
                     </div>
                 </div> 
             </div> 
@@ -93,7 +94,7 @@
                         Like his previous album Fine Line, Styles’s third album demonstrates that he’s not afraid to be open and honest in his lyrics.
                          However, this album is one of his most...</p>
                     <div class="news-readmorebtncontainer">
-                        <button target="_blank" class="news-readmorebtn" onclick="window.location.href='https://www.euphoriazine.com/blog/2022/05/music/albums-harry-styles-harrys-house/'">READ MORE</button>
+                        <button target="_blank" class="news-readmorebtn" onclick="window.open('https://www.euphoriazine.com/blog/2022/05/music/albums-harry-styles-harrys-house/', '_blank');">READ MORE</button>
                     </div>
                 </div>  
             </div>
@@ -108,7 +109,7 @@
                          with over $400 million in ticket sales. This historic achievement means that Styles now claims the...</p>
                     <div class="news-readmorebtncontainer">
                         <!--_blank so it opens in new tab, this is a read more button that will redirect to the actual article-->
-                        <button target="_blank" class="news-readmorebtn" onclick="window.location.href='https://www.forbes.com/sites/hughmcintyre/2023/04/21/harry-styles-love-on-tour-is-now-the-tenth-highest-grossing-tour-of-all-time/?sh=5fd884a4f490';">READ MORE</button>
+                        <button target="_blank" class="news-readmorebtn" onclick="window.open('https://www.forbes.com/sites/hughmcintyre/2023/04/21/harry-styles-love-on-tour-is-now-the-tenth-highest-grossing-tour-of-all-time/?sh=5fd884a4f490', '_blank');">READ MORE</button>
                     </div>
                 </div> 
             </div> 
@@ -122,7 +123,7 @@
                         “More than anything, it just kind of feels like validation that you're on the right path,” said Styles in the press room after his win.
                          “When we get in the studio and begin a record we just make the music that...</p>
                     <div class="news-readmorebtncontainer">
-                        <button target="_blank" class="news-readmorebtn" onclick="window.location.href='https://www.forbes.com/sites/cathyolson/2023/02/06/harry-styles-on-his-album-of-the-year-grammy-win/?sh=31d368444f92'">READ MORE</button>
+                        <button target="_blank" class="news-readmorebtn" onclick="window.open('https://www.forbes.com/sites/cathyolson/2023/02/06/harry-styles-on-his-album-of-the-year-grammy-win/?sh=31d368444f92', '_blank');">READ MORE</button>
                     </div>
                 </div>  
             </div>
@@ -137,7 +138,7 @@
                           — including 20 dates at...    </p>
                     <div class="news-readmorebtncontainer">
                         <!--_blank so it opens in new tab, this is a read more button that will redirect to the actual article-->
-                        <button target="_blank" class="news-readmorebtn" onclick="window.location.href='https://variety.com/2023/music/news/harry-styles-love-on-tour-ends-5-million-fans-donated-to-charity-1235683099/';">READ MORE</button>
+                        <button target="_blank" class="news-readmorebtn" onclick="window.open('https://variety.com/2023/music/news/harry-styles-love-on-tour-ends-5-million-fans-donated-to-charity-1235683099/', '_blank');">READ MORE</button>
                     </div>
                 </div> 
             </div> 
@@ -151,7 +152,7 @@
                          with "really well-crafted pop songs" and "moments of absolute beauty".
                         The Times called it the next step in the former One Direction star's "frankly remarkable reinvention".</p>
                     <div class="news-readmorebtncontainer">
-                        <button target="_blank" class="news-readmorebtn" onclick="window.location.href='https://www.bbc.com/news/entertainment-arts-61463365'">READ MORE</button>
+                        <button target="_blank" class="news-readmorebtn" onclick="window.open('https://www.bbc.com/news/entertainment-arts-61463365', '_blank');">READ MORE</button>
                     </div>
                 </div>  
             </div>

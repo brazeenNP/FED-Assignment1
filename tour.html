@@ -54,8 +54,79 @@
 
     <!--this is the content-->
     <main class="tour">
-        
-        
+        <div class="tour-heading">
+            <h1>TOUR</h1>
+        </div>
+        <!--make an empty div for divider so we can give it colours and width and height-->
+        <div class="tour-divider"></div>
+        <div class="tour-sliderheading">
+            <h2>TOUR GALLERY</h2>
+        </div>
+        <div class="tour-sliderwrapper">
+            <div class="tour-slider">
+                <img id="tour-slide1" src="Images, Videos and Graphics/harrytour1.png">
+                <img id="tour-slide2" src="Images, Videos and Graphics/harrytour2.png">
+                <img id="tour-slide3" src="Images, Videos and Graphics/harrytour3.png">
+            </div>
+            <div class="tour-slidernav">
+                <a href="#tour-slide1"></a>
+                <a href="#tour-slide2"></a>
+                <a href="#tour-slide3"></a>
+            </div>
+        </div>
+        <div class="tour-info">
+            <img src="Images, Videos and Graphics/harrytourcover.jpeg">
+            <h2>DATES AND LOCATIONS</h2>
+            <table>
+                <tr>
+                    <th>DATE</th>
+                    <th>COUNTRY</th>
+                    <th>LOCATION</th>
+                </tr>
+                <tr>
+                    <td>MARCH 11</td>
+                    <td>BANGKOK</td>
+                    <td>RAJAMANAGALA STADIUM</td>
+                    <td><button target="_blank" class="tour-buytickets" onclick="window.open('https://www.thaiticketmajor.com/concert/harry-styles-presents-love-on-tour-2023-bangkok.html', '_blank');">BUY TICKETS</button></td>
+                </tr>
+                <tr>
+                    <td>MARCH 14</td>
+                    <td>MANILA</td>
+                    <td>PHILIPPINE ARENA</td>
+                    <td><button target="_blank" class="tour-buytickets" onclick="window.open('https://www.livenation.ph/artist-harry-styles-971975', '_blank');">BUY TICKETS</button></td>
+                </tr>
+                <tr>
+                    <td>MARCH 17</td>
+                    <td>SINGAPORE</td>
+                    <td>NATIONAL STADIUM</td>
+                    <td><button target="_blank" class="tour-buytickets" onclick="window.open('https://www.klook.com/en-SG/event-detail/101011403-2022-harry-styles-singapore/', '_blank');">BUY TICKETS</button></td>
+                  </tr>
+                  <tr>
+                    <td>MARCH 20</td>
+                    <td>SEOUL</td>
+                    <td>KSPO DOME</td>
+                    <td><button target="_blank" class="tour-buytickets" onclick="window.open('https://go.seated.com/tour-events/ab40cfb5-3ace-48ef-b29c-987b6b443531', '_blank');">BUY TICKETS</button></td>
+                  </tr>
+                  <tr>
+                    <td>MARCH 24, 25</td>
+                    <td>TOKYO</td>
+                    <td>ARIAKE ARENA</td>
+                    <td><button target="_blank" class="tour-buytickets" onclick="window.open('https://www.japanconcerttickets.com/event/harry-styles-in-tokyo-2023-03-25/', '_blank');">BUY TICKETS</button></td>
+                  </tr>
+            </table> 
+            <div class="tour-contactheading">
+                <h2>WANT HARRY TO PERFORM AT YOUR EVENT?</h2>
+                <h3>FILL IN THIS FORM AND WE'LL GET BACK TO YOU!</h3>
+            </div>
+            <form class="news-contactform">
+                <div class="tour-formrow">
+                    <div class="tour-formcolumn">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your name here">
+                    </div>
+                </div>
+            </form>
+        </div>
     </main>
 
     <footer>
