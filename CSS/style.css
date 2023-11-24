@@ -595,9 +595,45 @@ td{
     align-items: center;
 }
 
-.news-contactform{
-    width: 100%;
-    position: relative;
+.tour-contactform{
+    /*space from the text above*/
+    margin-top: 40px;
+    padding: 1rem;
+    /*i want the elements to be in a column, downwards*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lato", sans-serif;
+    width: 40vw;
+    height: 40vh;
+    background: #242424;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.tour-contactform textarea{
+    /*disable the resizer on the text area*/
+    resize: none;
+    
+}
+
+.tour-contactfield{
+    font-family: "Lato", sans-serif;
+    padding: 1rem 1.5rem;
+    margin: 10px 0;
+    border-radius: 4rem;
+    width: 75%;
+    border: none;
+    box-sizing: 10px 10px;
+}
+
+.tour-contactbtn{
+    transition: 0.3s;
+}
+
+.tour-contactbtn:hover{
+    color:#b5a0cb;
 }
 /*------------------------------------------------FOOTER----------------------------------------------------------------*/
 footer{
