@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="normalize" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/style.css">
+    <!--this is AOS library for scroll animations-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Harry Styles | Official Website</title>
     <style>
         /*archivo black*/
@@ -22,14 +24,14 @@
     <nav>
         <ul class="sidebar">
             <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill = #ffffff d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-            <li><a href="#">TOUR</a></li>
+            <li><a href="tour.html">TOUR</a></li>
             <li><a href="artist.html">ARTIST</a></li>
             <li><a href="index.html">HOME</a></li>
             <li><a href="listen.html">LISTEN</a></li>
             <li><a href="news.html">NEWS</a></li>
         </ul>
         <ul>
-            <li class="hideOnMobile"><a href="#">TOUR</a></li>
+            <li class="hideOnMobile"><a href="tour.html">TOUR</a></li>
             <li class="hideOnMobile"><a href="artist.html">ARTIST</a></li>
             <li class="hideOnMobile"><a href="index.html">HOME</a></li>
             <li class="hideOnMobile"><a href="listen.html">LISTEN</a></li>
@@ -70,6 +72,52 @@
                     He is known for his flamboyant fashion sense and his advocacy for LGBTQ+ rights.</p>
             </div>
         </div>
+        <div class="artist-timelineheading">
+            <h2>ARTIST TIMELINE</h2>
+        </div>
+        <div class="artist-timeline">
+            <div class="artist-timelinecontainer">
+                <img src="Images, Videos and Graphics/harrystylescover.png">
+                <div data-aos="fade-right" class="artist-timelinetext">
+                    <h3>Harry Styles</h3>
+                    <small>2017</small>
+                    <p>Styles released his first solo album, “Harry Styles”.
+                        The album reached number one in Australia, Canada, Ireland, 
+                        the United Kingdom, and the United States, where it was certified platinum. 
+                        With over a million copies sold globally, it became one of the best-selling albums of 2017.</p>
+                </div>
+            </div>
+
+            <div class="artist-timelinecontainer">
+                <img src="Images, Videos and Graphics/finelinecover.png">
+                <div data-aos="fade-right" class="artist-timelinetext">
+                    <h3>Fine Line</h3>
+                    <small>2019</small>
+                    <p>“Fine Line”, released in December 2019, debuted at number one on the US Billboard 200, 
+                        recording the highest first-week sales by a British male act in the United States.
+                        Styles became the first British male artist to have his 
+                        first two albums debut atop the Billboard 200. 
+                        Fine Line was certified platinum by the British Phonographic Industry(BPI)
+                        and double platinum by the RIAA.</p>
+                </div>
+            </div>
+
+            <div class="artist-timelinecontainer">
+                <img src="Images, Videos and Graphics/harryshousecover.png">
+                <div data-aos="fade-right" class="artist-timelinetext">
+                    <h3>Harry's House'</h3>
+                    <small>2022</small>
+                    <p>Styles released his third album, “Harry’s House”, on 20 May 2022.
+                        The album debuted with the best first-week sales in Styles' career. 
+                        It debuted at number one on the UK Albums Chart with 113,000 album-equivalent units, 
+                        becoming the fastest-selling and best-selling album of 2022 in the country.
+                         It also debuted at number one on the US Billboard 200, 
+                        with 521,500 album-equivalent units, including 330,000 album sales. 
+                        It debuted at number one in various other countries.</p>
+                </div>
+            </div>
+        </div>
+        
         
         
     </main>
@@ -87,5 +135,10 @@
         </ul>
     </footer>
 
+    <!--initialising AOS library-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

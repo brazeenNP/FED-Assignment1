@@ -687,6 +687,7 @@ td{
     background: #000000;
     /*put some space around all the elements*/
     padding: 20px;
+    border-radius: 2%;
 }
 .artist-intropicture{
     width:40%;
@@ -700,6 +701,76 @@ td{
     height: 80%;
     padding-left: 20px;
 }
+
+.artist-timelineheading{
+    color: #ffffff;
+    padding-top: 50px;
+}
+.artist-timeline{
+    display: flex;
+    /*we want the album timeline to be a column*/
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 100vw;;
+    margin: 100px auto;
+}
+
+.artist-timelinecontainer{
+    padding: 30px 50px;
+    position: relative;
+    width: 50%;
+    /*change opacity*/
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.artist-timelinetext{
+    padding: 20px 30px;
+    background: #0c0c0c;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    position: relative;
+    font-family: "Lato", sans-serif;
+    line-height: 1.5;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+/*album cover art*/
+.artist-timelinecontainer img{
+    position: absolute;
+    width: 70px;
+    left: 0px;
+    top: 32px;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+/*add the timeline line with pseudo element*/
+.artist-timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    /*take up full width of the timeline element*/
+    height: 100%;
+    background: #0c0c0c;
+    border: 1px solid #ffffff;
+    /*start at the absolute top of the timeline element and in the middle*/
+    top: 0;
+    left: 24%;
+    margin-left: -3px;
+    /*below all the album cover art*/
+    z-index: 1;
+    /*make an animation to make the line 
+}
+
+.artist-timelinetext small{
+    /*make some space between the title and the paragraph*/
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+
 /*------------------------------------------------FOOTER----------------------------------------------------------------*/
 footer{
     /*footer is not always at the same place, it depends on where content ends*/
@@ -812,6 +883,9 @@ footer{
     .tour-contactheading{
         font-size: 14px;
     }
+    .artist-introtextcontainer{
+        font-size: 15px;
+    }
 }
 
 @media(max-width:650px){
@@ -832,13 +906,22 @@ footer{
     .tour-info td, .tour-info th{
         font-size: 10px;
     }
-
-    
     .tour-slider img{
         object-fit: scale-down;
         align-self: center;
     }
-
+    .timeline{
+        margin: 50px auto;
+    }
+    .artist-intro{
+        flex-direction: column;
+    }
+    .artist-introtextcontainer{
+        /*since change from row to column, the picture is now on top and the padding has to be changed accordingly*/
+        padding-top: 20px;
+        padding-left: 0;
+        width: 80vw;
+    }
 }
 
 @media(max-width: 530px){
@@ -869,6 +952,24 @@ footer{
     }
     .tour-contactheading{
         font-size: 10px;
+    }
+    .artist-timelinecontainer{
+        width: 80vw;
+    }
+    .artist-timeline::after{
+        display: none;
+    }
+    .artist-intropicture{
+        width: 80%;
+    }
+    .artist-timelinecontainer img{
+        width: 50px;
+    }
+}
+
+@media(max-width: 465px){
+    .artist-timelinecontainer img{
+        left: 6.5%;
     }
 }
 /*after 400px, make the sidebar the full screen*/
