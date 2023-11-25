@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="normalize" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Harry Styles | Official Website</title>
+    <style>
+        /*archivo black*/
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Teko:wght@300&display=swap');
+        /*lato*/
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        /*Roboto Slab*/
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill = #ffffff d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="tour.html">TOUR</a></li>
+            <li><a href="artist.html">ARTIST</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="listen.html">LISTEN</a></li>
+            <li><a href="news.html">NEWS</a></li>
+        </ul>
+        <ul>
+            <li class="hideOnMobile"><a href="tour.html">TOUR</a></li>
+            <li class="hideOnMobile"><a href="artist.html">ARTIST</a></li>
+            <li class="hideOnMobile"><a href="index.html">HOME</a></li>
+            <li class="hideOnMobile"><a href="listen.html">LISTEN</a></li>
+            <li class="hideOnMobile"><a href="news.html">NEWS</a></li>
+            <!-- sidebar menu -->
+            <li class="menubutton" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill = #ffffff d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+
+    <script>
+        //to show the sidebar when the width of the viewport gets too small by changing the display to its intended mode which is flex
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        //to hide the sidebar when the width of the viewport becomes a big enough size for all the words to be displayed, changing the display to none and hiding it from view
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+
+    <!--this is the content-->
+    <main class="listen">
+        <div class="listen-heading">
+            <h1>LISTEN</h1>
+        </div>
+        <!--make an empty div for divider so we can give it colours and width and height-->
+        <div class="listen-divider"></div>
+        <!--first album-->
+        <div class="listen-card">
+            <div class="listen-circle">
+                <img class="listen-album" src="Images, Videos and Graphics/harrystylescover.png">
+            </div>
+            <div class="listen-content">
+                <h2>Harry Styles (2017)</h2>
+                <p>Where Harry's solo career started: his first album, Harry Styles.</p>
+                <a target="_blank" href="https://hstyles.lnk.to/harrystyles">Listen here.</a>
+            </div>
+        </div>
+        <!--second album-->
+        <div class="listen-card">
+            <div class="listen-circle">
+                <img class="listen-album" src="Images, Videos and Graphics/finelinecover.png">
+            </div>
+            <div class="listen-content">
+                <h2>Fine Line (2019)</h2>
+                <p>The award-winning second album, with hits like 'Watermelon Sugar' and 'Adore You'.</p>
+                <a target="_blank" href="https://hstyles.lnk.to/fineline">Listen here.</a>
+            </div>
+        </div>
+        <!--third album-->
+        <div class="listen-card">
+            <div class="listen-circle">
+                <img class="listen-album" src="Images, Videos and Graphics/harryshousecover.png">
+            </div>
+            <div class="listen-content">
+                <h2>Harry's House (2022)</h2>
+                <p>The Grammy-winning album, featuring the hit single 'As It Was'.</p>
+                <a target="_blank" href="https://hstyles.lnk.to/harryshouse">Listen here.</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <ul class="socialmedia">
+            <li><a href="https://www.facebook.com/harrystyles/"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" height = "30" viewBox="0 0 512 512"><path fill=#ffffff d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z" fill-rule="evenodd"/></svg></a></li>
+            <li><a href="https://www.youtube.com/channel/UCZFWPqqPkFlNwIxcpsLOwew"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" height = "30" viewBox="0 0 512 512"><path fill=#ffffff d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149 1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5 58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5 2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9zM207 353.89v-196.5l145 98.2z"/></svg></a></li>
+            <li><a href="https://www.instagram.com/harrystyles/"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" height = "30" viewBox="0 0 512 512"><path fill=#ffffff d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"/><path fill=#ffffff d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"/></svg></a></li>
+        </ul>
+        <ul class="copyright">
+            <li><a href="https://www.sonymusic.com/terms-and-conditions/">TERMS AND CONDITIONS</a></li>
+            <li><a href="https://www.sonymusic.com">© 2023 SONY MUSIC ENTERTAINMENT</a></li>
+            <li><a href="https://www.sonymusic.com/privacy-policy/">PRIVACY POLICY</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
