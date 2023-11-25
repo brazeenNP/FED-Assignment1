@@ -1020,6 +1020,10 @@ footer{
     .artist-introtextcontainer{
         font-size: 15px;
     }
+    /*center the timeline*/
+    .artist-timeline::after{
+        left: 23%;
+    }
 }
 
 @media(max-width:650px){
