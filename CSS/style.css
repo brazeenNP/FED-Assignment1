@@ -322,15 +322,26 @@ nav ul li a:hover{
     display: flex;
     justify-content: center;
     /*space it out from the previous article*/
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 25px;
     background: #000000;
     width: 63vw;
 }
 
 
-.news-image1{
-    height: 45vh;
+.news-imagecontainer1{
+    width: 45vw;
+    object-fit: fill;
+    /*hide any part of image outside of container*/
+    overflow: hidden;
+}
+
+.news-imagecontainer1 img{
+    /*make the image fill the width of container*/
+    width: 100%; 
+    /*maintain the aspect ratio*/
+    height: auto; 
+    /*remove any alignment/spacing that is default*/
+    display: block; 
 }
 
 .news-content1{
@@ -356,15 +367,27 @@ nav ul li a:hover{
 .news-container2{
     display: flex;
     justify-content: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    /*space it out from previous article*/
+    padding: 25px;
     background: #000000;
     width: 63vw;
 }
-.news-image2{
-    /*opposite order because i want alternating side one picture one text*/
+
+.news-imagecontainer2{
+    /*to make alternating sides for the picture eg. left first article, right second article*/
     order: 2;
-    height: 45vh;
+    width: 45vw;
+    /*hide any part of image outside of container*/
+    overflow: hidden;
+}
+
+.news-imagecontainer2 img{
+    /*make the image fill the width of container*/
+    width: 100%; 
+    /*maintain the aspect ratio*/
+    height: auto; 
+    /*remove any alignment/spacing that is default*/
+    display: block; 
 }
 
 .news-content2{
