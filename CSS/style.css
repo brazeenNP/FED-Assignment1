@@ -1005,7 +1005,7 @@ footer{
     .page2-homelistenbtn{
         transform: translateY(-15vh);
     }
-    }
+    
     .news-container1, .news-container2{
         flex-direction: column;
     }
