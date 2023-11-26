@@ -172,7 +172,9 @@ nav ul li a:hover{
     z-index: -1;
     /*put the video in the center of page*/
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .page2-home video{
@@ -182,28 +184,28 @@ nav ul li a:hover{
 .page2-homepicture{ 
     /*put in the middle of the video*/
     align-self: center;
-    position: absolute;
     width: 350px;
     /*make sure it is on top*/
     z-index: 999;
 }
 
+.page2-homecontent{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .page2-hometext{
     color: #ffffff;
-    position: absolute;
-    align-self: flex-end;
-    transform: translateY(-120px);
-    font-size: 3vw;
+    font-size: 50px;
     color: #fcc95a;
     letter-spacing: 1px;
     text-shadow: 2px 0 #8e4a11, -2px 0 #8e4a11,0 -2px #8e4a11, 1px 1px #8e4a11, -1px -1px #8e4a11, 1px -1px #8e4a11, -1px 1px #8e4a11;
 }   
 
 .page2-homelistenbtn{
-    /*start the button at the bottom of the page then i will move it up a little with transform*/
-    align-self: flex-end;
-    position: absolute;
-    transform: translateY(-80px);
     /*font, colour, letter spacing, and outline text*/
     color: #ffffff;
     background: #8e4a11;
@@ -227,6 +229,8 @@ nav ul li a:hover{
     background: #fcc95a;
     color: #000000;
 }
+
+
 /*------------------------------------------------MAIN NEWS----------------------------------------------------------------*/
 
 .news{
@@ -994,6 +998,14 @@ footer{
 }
 
 @media(max-width: 1080px){
+    .page2-hometext{
+        font-size: 6vw;
+        transform:translateY(-22vh);
+    }
+    .page2-homelistenbtn{
+        transform: translateY(-15vh);
+    }
+    }
     .news-container1, .news-container2{
         flex-direction: column;
     }
@@ -1022,9 +1034,6 @@ footer{
     .page2-homelistenbtn{
         transform: translateY(-15vh);
     }
-    .page2-hometext{
-        font-size: 4vw;
-    }
     .news-container1, .news-container2{
         width: 75vw;
     }
@@ -1051,7 +1060,7 @@ footer{
 
 @media(max-width:650px){
     .page2-hometext{
-        font-size: 5vw;
+        font-size: 7vw;
     }
     .news-content1, .news-content2{
         width: 350px;
@@ -1097,7 +1106,7 @@ footer{
         transform: translateY(-21vh);
     }
     .page2-homelistenbtn{
-        transform:translateY(-12vh);
+        transform:translateY(-15vh);
     }
     .news-content1, .news-content2{
         width: 300px;
@@ -1133,6 +1142,12 @@ footer{
 }
 
 @media(max-width: 465px){
+    .page2-hometext{
+        transform: translateY(-25vh);
+    }
+    .page2-homelistenbtn{
+        transform:translateY(-20vh);
+    }
     .artist-timelinecontainer img{
         left: 6.5%;
     }
@@ -1146,10 +1161,10 @@ footer{
         top:20%;
     }
     .page2-hometext{
-        transform: translateY(-27vh);
+        transform: translateY(-28vh);
     }
     .page2-homelistenbtn{
-        transform: translateY(-20vh);
+        transform: translateY(-23vh);
     }
     .news-content1, .news-content2{
         width: 200px;
@@ -1170,10 +1185,13 @@ footer{
 }
 
 @media(max-width: 350px){
-    .page2-hometext{
-        transform:translateY(-30vh);
-    }
     .page1-home image{
         align-self:flex-end;
+    }
+    .page2-hometext{
+        transform: translateY(-31vh);
+    }
+    .page2-homelistenbtn{
+        transform:translateY(-26vh);
     }
 }

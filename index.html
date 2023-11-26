@@ -24,14 +24,14 @@
             <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill = #ffffff d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
             <li><a href="tour.html">TOUR</a></li>
             <li><a href="artist.html">ARTIST</a></li>
-            <li><a href="#">HOME</a></li>
+            <li><a href="index.html">HOME</a></li>
             <li><a href="listen.html">LISTEN</a></li>
             <li><a href="news.html">NEWS</a></li>
         </ul>
         <ul>
             <li class="hideOnMobile"><a href="tour.html">TOUR</a></li>
             <li class="hideOnMobile"><a href="artist.html">ARTIST</a></li>
-            <li class="hideOnMobile"><a href="#">HOME</a></li>
+            <li class="hideOnMobile"><a href="index.html">HOME</a></li>
             <li class="hideOnMobile"><a href="listen.html">LISTEN</a></li>
             <li class="hideOnMobile"><a href="news.html">NEWS</a></li>
             <!-- sidebar menu -->
@@ -56,15 +56,17 @@
     <main class="home">
         <div class="page1-home">
             <image src="Images, Videos and Graphics/harryhomepage.jpg" width=100%></image>
-            <div class="hometextcontainer">
+            <div data-aos="fade-in" class="hometextcontainer">
                 <h1>HARRY STYLES</h1>
             </div> 
         </div>
         <div class="page2-home">
-            <image class ="page2-homepicture" src="Images, Videos and Graphics/harryshousecover.png" ></image>
-            <h1 class="page2-hometext">HARRY'S HOUSE</h1>
+            <div class="page2-homecontent">
+                <image class ="page2-homepicture" src="Images, Videos and Graphics/harryshousecover.png" ></image>
+                <h1 class="page2-hometext">HARRY'S HOUSE</h1>
+                <button class="page2-homelistenbtn" onclick="window.location.href='listen.html';">LISTEN</button>
+            </div>
             <video autoplay loop muted playsinline src="Images, Videos and Graphics/page2-homepage video.mp4" class="backgroundvideo"></video>
-            <button class="page2-homelistenbtn" onclick="window.location.href='listen.html';">LISTEN</button>
         </div>
         
     </main>
@@ -81,6 +83,10 @@
             <li><a href="https://www.sonymusic.com/privacy-policy/">PRIVACY POLICY</a></li>
         </ul>
     </footer>
-
+    <!--initialising AOS library-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
 </body>
 </html>
