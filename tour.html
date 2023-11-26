@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="normalize" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/style.css">
+    <!--this is AOS library for scroll animations-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Harry Styles | Official Website</title>
     <style>
         /*archivo black*/
@@ -118,7 +120,7 @@
                 <h2>WANT HARRY TO PERFORM AT YOUR EVENT?</h2>
                 <h3>FILL IN THIS FORM AND WE'LL GET BACK TO YOU!</h3>
             </div>
-            <form class="tour-contactform">
+            <form data-aos="zoom-out" class="tour-contactform">
                 <h3>Get in touch</h3>
                 <input type="text" class="tour-contactfield" placeholder="Your Name">
                 <input type="email" class="tour-contactfield" placeholder="Your Email">
@@ -147,6 +149,10 @@
             <li><a href="https://www.sonymusic.com/privacy-policy/">PRIVACY POLICY</a></li>
         </ul>
     </footer>
-
+    <!--initialising AOS library-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
 </body>
 </html>
