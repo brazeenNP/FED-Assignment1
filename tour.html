@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="normalize" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/style.css">
-    <!--this is AOS library for scroll animations-->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Harry Styles | Official Website</title>
     <style>
         /*archivo black*/
@@ -41,19 +39,6 @@
         </ul>
     </nav>
 
-    <script>
-        //to show the sidebar when the width of the viewport gets too small by changing the display to its intended mode which is flex
-        function showSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
-        }
-        //to hide the sidebar when the width of the viewport becomes a big enough size for all the words to be displayed, changing the display to none and hiding it from view
-        function hideSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'
-        }
-    </script>
-
     <!--this is the content-->
     <main class="tour">
         <div class="tour-heading">
@@ -66,9 +51,9 @@
         </div>
         <div class="tour-sliderwrapper">
             <div class="tour-slider">
-                <img id="tour-slide1" src="Images, Videos and Graphics/harrytour1.png">
-                <img id="tour-slide2" src="Images, Videos and Graphics/harrytour2.png">
-                <img id="tour-slide3" src="Images, Videos and Graphics/harrytour3.png">
+                <img id="tour-slide1" src="Images,%20Videos%20and%20Graphics/harrytour1.png" alt="Tour picture of harry styles 1">
+                <img id="tour-slide2" src="Images,%20Videos%20and%20Graphics/harrytour2.png" alt="Tour picture of harry styles 2">
+                <img id="tour-slide3" src="Images,%20Videos%20and%20Graphics/harrytour3.png" alt="Tour picture of harry styles 3">
             </div>
             <div class="tour-slidernav">
                 <a href="#tour-slide1"></a>
@@ -77,66 +62,62 @@
             </div>
         </div>
         <div class="tour-info">
-            <img src="Images, Videos and Graphics/harrytourcover.jpeg">
+            <img src="Images,%20Videos%20and%20Graphics/harrytourcover.jpeg" alt="cover of harry styles love on tour">
             <h2 class="tour-infoheader">DATES AND LOCATIONS</h2>
             <table>
                 <tr>
                     <th>DATE</th>
                     <th>COUNTRY</th>
                     <th class="tour-location">LOCATION</th>
+                    <th>BUY TICKETS</th> 
                 </tr>
                 <tr>
                     <td>MARCH 11</td>
                     <td>BANGKOK</td>
                     <td class="tour-location">RAJAMANAGALA STADIUM</td>
-                    <td><button target="_blank" class="tour-buytickets" onclick="window.open('https://www.thaiticketmajor.com/concert/harry-styles-presents-love-on-tour-2023-bangkok.html', '_blank');">BUY TICKETS</button></td>
+                    <td><button class="tour-buytickets" onclick="window.open('https://www.thaiticketmajor.com/concert/harry-styles-presents-love-on-tour-2023-bangkok.html', '_blank');">BUY TICKETS</button></td>
                 </tr>
                 <tr>
                     <td>MARCH 14</td>
                     <td>MANILA</td>
                     <td class="tour-location">PHILIPPINE ARENA</td>
-                    <td><button target="_blank" class="tour-buytickets" onclick="window.open('https://www.livenation.ph/artist-harry-styles-971975', '_blank');">BUY TICKETS</button></td>
+                    <td><button class="tour-buytickets" onclick="window.open('https://www.livenation.ph/artist-harry-styles-971975', '_blank');">BUY TICKETS</button></td>
                 </tr>
                 <tr>
                     <td>MARCH 17</td>
                     <td>SINGAPORE</td>
                     <td class="tour-location">NATIONAL STADIUM</td>
-                    <td><button target="_blank" class="tour-buytickets" onclick="window.open('https://www.klook.com/en-SG/event-detail/101011403-2022-harry-styles-singapore/', '_blank');">BUY TICKETS</button></td>
+                    <td><button class="tour-buytickets" onclick="window.open('https://www.klook.com/en-SG/event-detail/101011403-2022-harry-styles-singapore/', '_blank');">BUY TICKETS</button></td>
                   </tr>
                   <tr>
                     <td>MARCH 20</td>
                     <td>SEOUL</td>
                     <td class="tour-location">KSPO DOME</td>
-                    <td><button target="_blank" class="tour-buytickets" onclick="window.open('https://go.seated.com/tour-events/ab40cfb5-3ace-48ef-b29c-987b6b443531', '_blank');">BUY TICKETS</button></td>
+                    <td><button class="tour-buytickets" onclick="window.open('https://go.seated.com/tour-events/ab40cfb5-3ace-48ef-b29c-987b6b443531', '_blank');">BUY TICKETS</button></td>
                   </tr>
                   <tr>
                     <td>MARCH 24, 25</td>
                     <td>TOKYO</td>
                     <td class="tour-location">ARIAKE ARENA</td>
-                    <td><button target="_blank" class="tour-buytickets" onclick="window.open('https://www.japanconcerttickets.com/event/harry-styles-in-tokyo-2023-03-25/', '_blank');">BUY TICKETS</button></td>
+                    <td><button class="tour-buytickets" onclick="window.open('https://www.japanconcerttickets.com/event/harry-styles-in-tokyo-2023-03-25/', '_blank');">BUY TICKETS</button></td>
                   </tr>
             </table> 
             <div class="tour-contactheading">
                 <h2>WANT HARRY TO PERFORM AT YOUR EVENT?</h2>
                 <h3>FILL IN THIS FORM AND WE'LL GET BACK TO YOU!</h3>
             </div>
-            <form data-aos="zoom-out" class="tour-contactform">
+            <form class="tour-contactform">
                 <h3>Get in touch</h3>
                 <input type="text" class="tour-contactfield" placeholder="Your Name">
                 <input type="email" class="tour-contactfield" placeholder="Your Email">
                 <input type="text" class="tour-contactfield" placeholder="Your Subject">
                 <textarea class="tour-contactfield" placeholder="Message"></textarea>
-                <btn class="tour-contactbtn" onclick=resetForm()>Submit</btn>
+                <button class="tour-contactbtn" onclick=resetForm()>SUBMIT</button>
             </form>
+            
         </div>
     </main>
 
-    <script>
-        // to reset the contact form after the submit button is pressed
-        function resetForm(){
-            document.querySelector(".tour-contactform").reset();
-        }
-    </script>
     <footer>
         <ul class="socialmedia">
             <li><a href="https://www.facebook.com/harrystyles/"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" height = "30" viewBox="0 0 512 512"><path fill=#ffffff d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z" fill-rule="evenodd"/></svg></a></li>
@@ -149,10 +130,6 @@
             <li><a href="https://www.sonymusic.com/privacy-policy/">PRIVACY POLICY</a></li>
         </ul>
     </footer>
-    <!--initialising AOS library-->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-    AOS.init();
-    </script>
+    <script src="JS/script.js"></script>
 </body>
 </html>

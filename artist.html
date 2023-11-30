@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="normalize" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/style.css">
-    <!--this is AOS library for scroll animations-->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Harry Styles | Official Website</title>
     <style>
         /*archivo black*/
@@ -41,19 +39,6 @@
         </ul>
     </nav>
 
-    <script>
-        //to show the sidebar when the width of the viewport gets too small by changing the display to its intended mode which is flex
-        function showSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
-        }
-        //to hide the sidebar when the width of the viewport becomes a big enough size for all the words to be displayed, changing the display to none and hiding it from view
-        function hideSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'
-        }
-    </script>
-
     <!--this is the content-->
     <main class="artist">
         <div class="artist-heading">
@@ -62,7 +47,7 @@
         <!--make an empty div for divider so we can give it colours and width and height-->
         <div class="artist-divider"></div>
         <div class="artist-intro">
-            <img class="artist-intropicture" src="Images, Videos and Graphics/harryartistintro.jpeg">
+            <img class="artist-intropicture" src="Images,%20Videos%20and%20Graphics/harryartistintro.jpeg" alt="intro picture of harry styles">
             <div class="artist-introtextcontainer">
                 <h2>WHO IS HARRY STYLES?</h2>
                 <p>Harry Styles is an English singer, songwriter, and actor who rose to fame as a member of the boy band One Direction, one of the best-selling boy groups of all time.
@@ -77,8 +62,8 @@
         </div>
         <div class="artist-timeline">
             <div class="artist-timelinecontainer">
-                <img src="Images, Videos and Graphics/harrystylescover.png">
-                <div data-aos="fade-right" class="artist-timelinetext">
+                <img src="Images,%20Videos%20and%20Graphics/harrystylescover.png" alt="cover of harry styles first album">
+                <div class="artist-timelinetext">
                     <h3>Harry Styles</h3>
                     <small>2017</small>
                     <p>Styles released his first solo album, “Harry Styles”.
@@ -89,8 +74,8 @@
             </div>
 
             <div class="artist-timelinecontainer">
-                <img src="Images, Videos and Graphics/finelinecover.png">
-                <div data-aos="fade-right" class="artist-timelinetext">
+                <img src="Images,%20Videos%20and%20Graphics/finelinecover.png" alt="fine line album cover">
+                <div class="artist-timelinetext">
                     <h3>Fine Line</h3>
                     <small>2019</small>
                     <p>“Fine Line”, released in December 2019, debuted at number one on the US Billboard 200, 
@@ -103,8 +88,8 @@
             </div>
 
             <div class="artist-timelinecontainer">
-                <img src="Images, Videos and Graphics/harryshousecover.png">
-                <div data-aos="fade-right" class="artist-timelinetext">
+                <img src="Images,%20Videos%20and%20Graphics/harryshousecover.png" alt="harry's house album cover">
+                <div class="artist-timelinetext">
                     <h3>Harry's House</h3>
                     <small>2022</small>
                     <p>Styles released his third album, “Harry’s House”, on 20 May 2022.
@@ -135,10 +120,6 @@
         </ul>
     </footer>
 
-    <!--initialising AOS library-->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+    <script src="JS/script.js"></script>
 </body>
 </html>

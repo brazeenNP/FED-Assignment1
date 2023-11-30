@@ -39,34 +39,32 @@
         </ul>
     </nav>
 
-    <script>
-        //to show the sidebar when the width of the viewport gets too small by changing the display to its intended mode which is flex
-        function showSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
-        }
-        //to hide the sidebar when the width of the viewport becomes a big enough size for all the words to be displayed, changing the display to none and hiding it from view
-        function hideSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'
-        }
-    </script>
-
     <!--this is the content-->
     <main class="home">
+        
         <div class="page1-home">
-            <image src="Images, Videos and Graphics/harryhomepage.jpg" width=100%></image>
-            <div data-aos="fade-in" class="hometextcontainer">
+            <div class="hometextcontainer">
                 <h1>HARRY STYLES</h1>
             </div> 
         </div>
+        
         <div class="page2-home">
             <div class="page2-homecontent">
-                <image class ="page2-homepicture" src="Images, Videos and Graphics/harryshousecover.png" ></image>
+                <img class ="page2-homepicture" src="Images,%20Videos%20and%20Graphics/harryshousecover.png" alt="cover of harry's house album">
                 <h1 class="page2-hometext">HARRY'S HOUSE</h1>
                 <button class="page2-homelistenbtn" onclick="window.location.href='listen.html';">LISTEN</button>
             </div>
-            <video autoplay loop muted playsinline src="Images, Videos and Graphics/page2-homepage video.mp4" class="backgroundvideo"></video>
+            <video autoplay loop muted playsinline src="Images,%20Videos%20and%20Graphics/page2-homepagevideo.mp4" class="backgroundvideo"></video>
+        </div>
+
+        <div class="page3-home">
+            <div class="page3-homecontent">
+                <img class="page3-homepicture" src="Images,%20Videos%20and%20Graphics/harrytourcover.jpeg" alt="cover of harry styles' love on tour">
+                <div class="page3-hometextcontainer">
+                    <h1>LOVE ON TOUR ASIA</h1>
+                    <button class="page3-hometourbtn" onclick="window.location.href='tour.html';">GET TICKETS</button>
+                </div>
+            </div>
         </div>
         
     </main>
@@ -83,10 +81,6 @@
             <li><a href="https://www.sonymusic.com/privacy-policy/">PRIVACY POLICY</a></li>
         </ul>
     </footer>
-    <!--initialising AOS library-->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-    AOS.init();
-    </script>
+    <script src="JS/script.js"></script>
 </body>
 </html>

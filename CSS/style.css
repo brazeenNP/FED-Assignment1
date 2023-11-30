@@ -50,7 +50,6 @@ nav{
     width: 100%;
     /*center the text*/
     text-align: center;
-    box-shadow: 3px, 3px, 5px, rgb(34, 70, 178);
 }
 
 nav ul li{
@@ -129,28 +128,41 @@ nav ul li a:hover{
 /*------------------------------------------------MAIN HOME----------------------------------------------------------------*/
 .home{
     background: #000000;
+    /*make it so the main portion can grow and not have to stay the same size*/
     flex-grow: 1;
     overflow: hidden;
+    min-height: 100vh;
+    /*for the parallax*/
+    perspective: 10px;
 }
 
 .page1-home{
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     width: 100vw;
-    height: 100vh;
+    
+    position: relative;
+    z-index: -1;
+    background: url('../Images,%20Videos%20and%20Graphics/harryhomepage.jpg');
+    background-repeat: no-repeat;
+    background-position:top;
+    background-size: cover;
 }
 
 /*this is the top image of harry styles*/
-.page1-home img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.page1-homebackground{
+    position: absolute;
+    /*ensure the picture is 100% of the page1-home container*/
+    min-height: 100%;
 }
 
 .page1-home .hometextcontainer{
     /*dont want position to change so it is absolute*/
     position: absolute;
     align-self: center;
+    transform: translateY(20px);
     /*ensure the text stays on the same line*/
     white-space: nowrap;
 }
@@ -178,7 +190,7 @@ nav ul li a:hover{
 }
 
 .page2-home video{
-    min-height: 100vh;
+    min-width: 100vw;
 }
 
 .page2-homepicture{ 
@@ -221,6 +233,7 @@ nav ul li a:hover{
 }
 
 .page2-homelistenbtn:hover{
+    /*when hovering over the button, the letter spacing increases*/
     letter-spacing: 1.5px;
     box-shadow: 0 0 10px #fcc95a,
                  0 0 20px #ffffff,
@@ -228,6 +241,67 @@ nav ul li a:hover{
                  0 0 80px #ffffff;
     background: #fcc95a;
     color: #000000;
+}
+
+.page3-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url('../Images,%20Videos%20and%20Graphics/harryhomepage3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.page3-homecontent{
+    /*make the image + text container in a row, with equal spacing in between them*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50vw;
+    background: #b5a0cb;
+    /*round edges*/
+    border-radius: 2%;
+    /*some padding for aesthetics*/
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.page3-hometextcontainer{
+    /*make the elements of the container a column + center align them*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #242424;
+    font-size: 20px;
+}
+
+.page3-hometourbtn{
+    font-family: "Archivo Black", sans-serif;
+    background:none;
+    color: #242424;
+    border: 2px solid #242424;
+    /*spacing*/
+    letter-spacing: 2px;
+    padding: 0.5em 0.5em;
+    margin: 0.5em;
+    /*transition for hover animation*/
+    transition: 0.5s;
+}
+
+.page3-hometourbtn:hover{
+    color: #ffffff;
+    background: #000000;
+}
+
+.page3-homepicture{
+    width: 250px;
 }
 
 
@@ -279,6 +353,7 @@ nav ul li a:hover{
 }
 
 .news-filter{
+    /*center it*/
     display: flex;
     justify-content: center;
 }
@@ -410,6 +485,7 @@ nav ul li a:hover{
 }
 
 .news-readmorebtncontainer{
+    /*for aesthetics*/
     padding-top: 15px;
 }
 
@@ -450,6 +526,7 @@ nav ul li a:hover{
     /*center and make sure full picture can be seen*/
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .tour-heading{
@@ -483,7 +560,8 @@ nav ul li a:hover{
     position: relative;
     /*i am trying rem units in the hope that it will make it easier to be responsive*/
     max-width: 48rem;
-    padding-bottom: 20px;
+    padding-top: 200px;
+    padding-bottom: 400px;
     
 }
 
@@ -525,7 +603,7 @@ nav ul li a:hover{
     column-gap: 1rem;
     /*slider nav should stay in the same place*/
     position: absolute;
-    bottom: 2rem;
+    bottom: 26rem;
     /*put it in the middle*/
     left: 50%;
     transform: translateX(-50%);
@@ -551,6 +629,7 @@ nav ul li a:hover{
 .tour-info{
     background: #b5a0cb;
     width: 100vw;
+    /*tour info should be centered*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -646,7 +725,6 @@ td{
 .tour-contactform textarea{
     /*disable the resizer on the text area*/
     resize: none;
-    
 }
 
 .tour-contactfield{
@@ -656,15 +734,26 @@ td{
     border-radius: 4rem;
     width: 75%;
     border: none;
-    box-sizing: 10px 10px;
+    box-sizing: border-box;
 }
 
 .tour-contactbtn{
+    font-family: "Archivo Black", sans-serif;
+    color:#ffffff;
+    background: #242424;
+    letter-spacing: 1.5px;
+    /*make pill shape*/
+    padding: 0.5em 1em;
+    margin: 0.25em;
+    border-radius: 1.5em;
+    /*so they know they can click on this*/
+    cursor: pointer;
     transition: 0.3s;
 }
 
 .tour-contactbtn:hover{
-    color:#b5a0cb;
+    color:#242424;
+    background: #ffffff;
 }
 /*------------------------------------------------MAIN ARTIST----------------------------------------------------------------*/
 .artist{
@@ -839,6 +928,7 @@ td{
     width: 300px;
     height: 350px;
     margin: 20px;
+    /*round the corners and add transition for when it opens up*/
     border-radius: 20px;
     transition: 0.5s;
     transition-delay: 0.5s;
@@ -876,6 +966,7 @@ td{
     width: 100%;
     height: 100%;
     background: #ffffff;
+    /*only the circle part of the element should be visible*/
     clip-path: circle(120px at center);
     transition: 0.5s;
 }
@@ -1000,12 +1091,11 @@ footer{
 @media(max-width: 1080px){
     .page2-hometext{
         font-size: 6vw;
-        transform:translateY(-22vh);
+       
     }
-    .page2-homelistenbtn{
-        transform: translateY(-15vh);
+    .page3-hometextcontainer{
+        font-size: 2vw;
     }
-    
     .news-container1, .news-container2{
         flex-direction: column;
     }
@@ -1028,12 +1118,6 @@ footer{
 }
 /*closer to tablet size screen*/
 @media(max-width: 790px){
-    .page2-hometext{
-        transform:translateY(-22vh);
-    }
-    .page2-homelistenbtn{
-        transform: translateY(-15vh);
-    }
     .news-container1, .news-container2{
         width: 75vw;
     }
@@ -1060,7 +1144,10 @@ footer{
 
 @media(max-width:650px){
     .page2-hometext{
-        font-size: 7vw;
+        font-size: 9.5vw;
+    }
+    .page3-homecontent{
+        flex-direction: column;
     }
     .news-content1, .news-content2{
         width: 350px;
@@ -1099,15 +1186,13 @@ footer{
 }
 
 @media(max-width: 530px){
+    .hometextcontainer h1{
+        font-size: 11vw;
+    }
     .page2-homepicture{
         width: 75vw;
     }
-    .page2-hometext{
-        transform: translateY(-21vh);
-    }
-    .page2-homelistenbtn{
-        transform:translateY(-15vh);
-    }
+    
     .news-content1, .news-content2{
         width: 300px;
     }
@@ -1142,14 +1227,11 @@ footer{
 }
 
 @media(max-width: 465px){
-    .page2-hometext{
-        transform: translateY(-25vh);
-    }
-    .page2-homelistenbtn{
-        transform:translateY(-20vh);
-    }
     .artist-timelinecontainer img{
         left: 6.5%;
+    }
+    .page3-homepicture{
+        width: 170px;
     }
 }
 /*after 400px, make the sidebar the full screen*/
@@ -1157,15 +1239,8 @@ footer{
     .sidebar{
         width: 100%
     }
-    .hometextcontainer{
-        top:20%;
-    }
-    .page2-hometext{
-        transform: translateY(-28vh);
-    }
-    .page2-homelistenbtn{
-        transform: translateY(-23vh);
-    }
+
+
     .news-content1, .news-content2{
         width: 200px;
         font-size: 12px;
@@ -1187,11 +1262,5 @@ footer{
 @media(max-width: 350px){
     .page1-home image{
         align-self:flex-end;
-    }
-    .page2-hometext{
-        transform: translateY(-31vh);
-    }
-    .page2-homelistenbtn{
-        transform:translateY(-26vh);
     }
 }
