@@ -17,7 +17,7 @@ const parallax = document.querySelector(".page1-home")
 //add event listener for the window, and make the function inside the event listener for simplicity sake (dont have to define it then call it by name and all that)
 window.addEventListener("scroll", function(){
     //the value of how much the user has scrolled from the top of the page
-    let offset = window.pageYOffset
+    let offset = window.scrollY
     //change the background position of the page1-home to 0.7 times the speed of the rest of the elements for a parallax effect
     parallax.style.backgroundPositionY = offset * 0.7 + "px"
 })
@@ -55,8 +55,27 @@ function toggleAlbumarticles(){
 }
 
 //-----------------------------------------------MAIN TOUR--------------------------------------------------------------------------------
-
+//form validation
 // to reset the contact form after the submit button is pressed
 function resetForm(){
-    document.querySelector(".tour-contactform").reset();
+    const formname = document.getElementById('nameform')
+    const formsubj = document.getElementById('subjform')
+    const formmsg = document.getElementById('msgform')
+    const form = document.querySelector('.tour-contactform')
+    let canSubmit = true
+    if (formname.value === '' || formname.value == null){
+        window.alert("Please enter a valid name.")
+        canSubmit = false
+    }
+    if (formsubj.value === '' || formsubj.value == null){
+        window.alert("Please enter a valid subject.")
+        canSubmit = false
+    }
+    if (formmsg.value === '' || formmsg.value == null){
+        window.alert("Please enter a valid message.")
+        canSubmit = false
+    }
+    if (canSubmit){
+        document.querySelector(".tour-contactform").reset();
+    }
 }
