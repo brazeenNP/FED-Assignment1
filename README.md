@@ -12,7 +12,7 @@ External user's goal:
 The site's users are fans and potential fans who would like to know more about Harry's background, achievements and current activities, and possibly book them for shows.
 Site owner's goal:
 The site owner is interested in getting more fans interested in Harry Styles to increase his popularity as well as get more performances
-When fans think of Harry, they think of electrifying performances with dark stadiums only illuminated by a few spotlights. I wanted to ensure I kept the vibe of that and so I ensured that the background and the overall theme of the website was dark. I also added videos playing in the background (eg. on the bottom part of the homepage) to make the website more lively and different from the usual static image, as well as scroll animations to make the design more interactive.
+When fans think of Harry, they think of electrifying performances with dark stadiums only illuminated by a few spotlights. I wanted to ensure I kept the vibe of that and so I ensured that the background and the overall theme of the website was dark. I also added videos playing in the background (eg. on the bottom part of the homepage) to make the website more lively and different from the usual static image, as well as animations to make the design more interactive. 
 <<<<<<< HEAD
 
 =======
@@ -71,8 +71,23 @@ Link to wireframe of website on mobile and desktop: https://www.figma.com/file/d
 - Only Vanilla Javascript, HTML and CSS
 
 ##Testing
+###Home
+1. The button did not work for my 'Listen' button, but only on some browsers. Once I changed the z-index of the button, it worked on all browsers.
 
-##References + Credits
+###News
+1. I test the JavaScript news filter, by turning both on, then turning either one off (the relevant articles will disappear), then turning all filters off (all the articles will disappear)
+
+###Tour
+I don't know why implementing an email check was not possible, it did not work
+1. When submitting the contact form, leave everything blank (3 popups will alert you for name, subject and message)
+2. When submitting the contact form, leave one/two fields blank (the popup will inform you of the other empty fields)
+3. When submitting the contact form, put an email in the wrong format (it will tell you how that you need an @)
+
+###Listen
+1. Hover your cursor in front of the circle (it will expand)
+2. Take your cursor out of the card (it will go back to circle)
+
+##References + Credits (for wireframe + website)
 harry styles 2017 album cover (edited to be noir in listen page)
 https://t2.genius.com/unsafe/867x0/https%3A%2F%2Fimages.genius.com%2F41ba08494f271380c364c081c5d03ab7.1000x1000x1.png
 fine line album cover (edited to be noir in listen page)
@@ -94,7 +109,7 @@ https://www.pngitem.com/middle/JJwRRw_listen-on-apple-music-logo-png-transparent
 harry news article 1
 https://www.nme.com/en_asia/news/music/harry-styles-love-on-tour-asia-dates-tickets-singapore-manila-bangkok-3349174
 harry news article 2
-euphoriazine.com/blog/2022/05/music/albums-harry-styles-harrys-house/
+https://www.euphoriazine.com/blog/2022/05/music/albums-harry-styles-harrys-house/
 harry news article 3
 https://www.forbes.com/sites/hughmcintyre/2023/04/21/harry-styles-love-on-tour-is-now-the-tenth-highest-grossing-tour-of-all-time/?sh=5fd884a4f490
 harry news article 4
