@@ -19,7 +19,7 @@ window.addEventListener("scroll", function(){
     //the value of how much the user has scrolled from the top of the page
     let offset = window.pageYOffset
     //change the background position of the page1-home to 0.7 times the speed of the rest of the elements for a parallax effect
-    parallax.style.backgroundPositionY = offset * 0.8 + "px"
+    parallax.style.backgroundPositionY = offset * 0.7 + "px"
 })
 
 //-----------------------------------------------MAIN NEWS--------------------------------------------------------------------------------

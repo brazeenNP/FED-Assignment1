@@ -924,6 +924,34 @@ td{
     margin-top: 50px;
     margin-bottom: 25px;
 }
+
+.card1{
+    width: 100vw;
+    height: 400px;
+    background: url('../Images,%20Videos%20and%20Graphics/harrystylescover-noir.png');
+    background-position: center;
+    background-size: 25%;
+    display: flex;
+    justify-content: center;
+}
+.card2{
+    width: 100vw;
+    height: 400px;
+    background: url('../Images,%20Videos%20and%20Graphics/finelinecover-noir.png');
+    background-position: center;
+    background-size: 25%;
+    display: flex;
+    justify-content: center;
+}
+.card3{
+    width: 100vw;
+    height: 400px;
+    background: url('../Images,%20Videos%20and%20Graphics/harryshousecover-noir.png');
+    background-position: center;
+    background-size: 25%;
+    display: flex;
+    justify-content: center;
+}
 .listen-card{
     position: relative;
     width: 300px;
