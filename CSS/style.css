@@ -230,6 +230,7 @@ nav ul li a:hover{
     border-radius: 1.5em;
     /*transition for the hover effects later*/
     transition: 0.5s;
+    z-index: 1000;
 }
 
 .page2-homelistenbtn:hover{
@@ -1079,7 +1080,7 @@ footer{
 
 /*------------------------------------------------@MEDIA----------------------------------------------------------------*/
 /*use this class hideOnMobile to hide all the things you dont want to see after 1022px*/
-@media(max-width: 1221px){
+@media(max-width: 1250px){
     .hideOnMobile{
         display: none;
     }
