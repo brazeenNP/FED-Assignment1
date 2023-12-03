@@ -925,6 +925,7 @@ td{
     margin-bottom: 25px;
 }
 
+/*the noir background with the album covers on the LISTEN page*/
 .card1{
     width: 100vw;
     height: 400px;
@@ -952,6 +953,8 @@ td{
     display: flex;
     justify-content: center;
 }
+
+/*the circle that expands into a rectangle (trick effect) then becomes a card with the album details*/
 .listen-card{
     position: relative;
     width: 300px;
@@ -969,7 +972,9 @@ td{
 
 /*make it expand when hover to show the information*/
 .listen-card:hover{
+    /*when card is hovered, the card expands to 600px from 300px*/
     width: 600px;
+    /*transition starts immediately on hover*/
     transition-delay: 0s;
 }
 
@@ -979,6 +984,7 @@ td{
     left: 0;
     width: 100%;
     height: 100%;
+    /*round edges*/
     border-radius: 20px;
     overflow: hidden;
     /*to make sure the image in the circle is centered*/
@@ -995,12 +1001,13 @@ td{
     width: 100%;
     height: 100%;
     background: #ffffff;
-    /*only the circle part of the element should be visible*/
+    /*only the circle part of the background should be visible*/
     clip-path: circle(120px at center);
     transition: 0.5s;
 }
 
 .listen-card:hover .listen-circle::before{
+    /*on hover, expand the circle*/
     clip-path: circle(400px at center);
 
 }
@@ -1008,9 +1015,10 @@ td{
 .listen-album{
     position: relative;
     width: 230px;
+    /*circular shape album cover*/
     border-radius: 50%;
     transition: 0.5s;
-    /*album cover takes a second to snap back to where it was after hovering*/
+    /*album cover takes half a second to snap back to where it was after hovering*/
     transition-delay: 0.5s;
 }
 
