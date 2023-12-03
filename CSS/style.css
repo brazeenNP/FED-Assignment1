@@ -823,6 +823,7 @@ td{
     color: #ffffff;
     padding-top: 50px;
 }
+
 .artist-timeline{
     display: flex;
     /*we want the album timeline to be a column*/
@@ -837,15 +838,13 @@ td{
     padding: 30px 50px;
     position: relative;
     width: 50%;
-    /*change opacity*/
-    background: rgba(0, 0, 0, 0.25);
 }
 
 .artist-timelinetext{
     padding: 20px 30px;
-    background: #0c0c0c;
+    background: #ffffff;
     border: 1px solid #ffffff;
-    color: #ffffff;
+    color: #0c0c0c;
     position: relative;
     font-family: "Lato", sans-serif;
     line-height: 1.5;
